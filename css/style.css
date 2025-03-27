@@ -37,6 +37,7 @@ body {
     width: 100%;
     margin: 0 auto;
     font-family: 'Open Sans';
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -97,6 +98,16 @@ header {
     gap: 5px;
 }
 
+.profile {
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--link);
+    transition: color .3s ease-in-out;
+}
+
 .header_top_content a {
     font-style: normal;
     font-weight: 400;
@@ -106,7 +117,8 @@ header {
     transition: color .3s ease-in-out;
 }
 
-.header_top_content a:hover {
+.header_top_content a:hover,
+.profile:hover {
     color: var(--blue);
     transition: color .3s ease-in-out;
 }
@@ -879,4 +891,225 @@ main {
 
 .price_input input {
     width: 100px;
+}
+
+.lk_modal {
+    z-index: 99999;
+    position: absolute;
+    right: -350px;
+    top: 40px;
+    width: 317px;
+    height: auto;
+    background: #fff;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
+    transition: right 0.3s ease-in-out;
+}
+
+.lk_modal.active {
+    right: 0;
+}
+
+.lk_modal_content {
+    padding: 0 21px 80px;
+}
+
+.lk_head {
+    background: var(--blue);
+    width: 100%;
+    height: 90px;
+    padding-top: 23px;
+    text-align: center;
+}
+
+.lk_head h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lk_info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    margin-top: -30px;
+    padding: 0 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1C1B1F;
+}
+
+.custom-file-button {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #007CFF;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.balance {
+    margin: 22px 0 25px;
+    padding: 10px 12px;
+    background: #FFFFFF;
+    border: 1px solid #4292ED;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance_info h6 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height, or 112% */
+    color: #767676;
+    margin-bottom: 12px;
+}
+
+.balance_info span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 18px;
+    /* identical to box height, or 82% */
+    color: #000000;
+}
+
+.balance_btn {
+    padding: 12px;
+    background: #007CFF;
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height, or 112% */
+    color: #FFFFFF;
+}
+
+.my_ads_btn,
+.my_message_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+    height: 61px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.my_ads_btn {
+    background: var(--blue);
+}
+
+.my_message_btn {
+    background: #2A9134;
+}
+
+.lk_modal ul {
+    border-radius: 8px;
+    border: 1px solid #AAA5A5;
+}
+
+.lk_modal ul li {
+    list-style: none;
+    position: relative;
+}
+
+.lk_modal ul li a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    color: #494949;
+}
+
+.lk_modal ul li a svg {
+    width: 24px;
+    height: auto;
+}
+
+.lk_modal ul li a::after {
+    content: url(../img/icon/arrow_forward_ios.svg);
+    display: block;
+    width: auto;
+    height: 20px;
+    right: 9px;
+    position: absolute;
+}
+
+.lk_modal ul li:last-child {
+    border: none;
+}
+
+.lk_modal ul li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    color: #494949;
+    border-bottom: 1px solid #AAA5A5;
+    padding: 18.5px 12px 18.5px 9px;
+}
+
+.lk_modal ul li svg {
+    width: 24px;
+    height: 24px;
 }
