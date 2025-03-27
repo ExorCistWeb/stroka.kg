@@ -689,3 +689,194 @@ main {
     fill: #fff;
     transition: fill .3s ease-in-out;
 }
+
+.board {
+    margin-top: 65px;
+}
+
+.ad_line {
+    padding: 16px 12px;
+    border-bottom: 1px solid #E8E8E8;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+
+.ad_info {
+    margin-top: 14px;
+    border-top: 3px solid #D9D9D9;
+}
+
+.ad_card {
+    position: relative;
+}
+
+.ad_hot {
+    border-color: #FFA455;
+    margin-top: 28px;
+}
+
+.ad_vip {
+    margin-top: 28px;
+    border-color: #494949;
+}
+
+.ad_vip .ad_fon {
+    top: 22px;
+}
+
+.ad_top {
+    border-color: #00B4D8;
+    margin-top: 28px;
+}
+
+.ad_top .ad_fon {
+    top: 47px;
+    right: 112px;
+}
+
+.ad_fon {
+    position: absolute;
+    right: 115px;
+    top: 10px;
+}
+
+.ad_widget {
+    position: absolute;
+    right: 99px;
+    top: -18.5px;
+}
+
+.price {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: var(--blue);
+    gap: 5px;
+}
+
+.ad_top_line {
+    gap: 15px;
+}
+
+.rooms {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2ECF2E;
+}
+
+.ui {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.area {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.status_ad {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 0 4px;
+    background: #FF3535;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.ad_center_line {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.ad_bottom_line {
+    gap: 33px;
+}
+
+.ad_date {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.view_info {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #007CFF;
+    gap: 3px;
+}
+
+.ad_center_line {
+    display: flex;
+    align-items: center;
+}
+
+.ad_geo,
+.ad_img {
+    position: absolute;
+    right: 12px;
+}
+
+.ad_function {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.ad_function button {
+    background: none;
+}
+
+.more_btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    padding: 10px;
+    background: #007CFF;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.price_input {
+    gap: 20px;
+    display: none;
+}
+
+.price_input input {
+    width: 100px;
+}

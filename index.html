@@ -106,7 +106,11 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                         </select>
-                        <button>Цена</button>
+                        <button id="priceButton">Цена</button>
+                        <div class="price_input flex_da">
+                            <input class="select" type="text" placeholder="От">
+                            <input class="select" type="text" placeholder="До">
+                        </div>
                     </div>
                     <div class="filter_option_button flex_daj">
                         <button class="show_btn">Показать<span>более 1 тыс объявлений</span></button>
@@ -146,7 +150,261 @@
                     </div>
                     <a href="" class="action_btn">Как сюда попасть?</a>
                 </div>
+                <div class="board">
+                    <div class="ad_info ad_hot">
+                        <div class="ad_card ">
+                            <div class="ad_top_line ad_line flex_da">
+                                <div class="price flex_da">
+                                    6,5 млн
+                                    <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.966 4.35175C0.322 5.48575 0 6.77375 0 8.21575C0 9.65775 0.322 10.9458 0.966 12.0798C1.624 13.2137 2.513 14.1027 3.633 14.7467C4.767 15.3767 6.034 15.6918 7.434 15.6918C9.086 15.6918 10.521 15.2788 11.739 14.4528C12.971 13.6128 13.832 12.4438 14.322 10.9458H10.941C10.605 11.6458 10.129 12.1777 9.513 12.5417C8.911 12.8918 8.211 13.0668 7.413 13.0668C6.559 13.0668 5.796 12.8708 5.124 12.4788C4.466 12.0728 3.948 11.5057 3.57 10.7778C3.206 10.0357 3.024 9.18175 3.024 8.21575C3.024 7.23575 3.206 6.38175 3.57 5.65375C3.948 4.92575 4.466 4.36575 5.124 3.97375C5.796 3.56775 6.559 3.36475 7.413 3.36475C8.211 3.36475 8.911 3.53975 9.513 3.88975C10.129 4.23975 10.605 4.76475 10.941 5.46475H14.322C13.832 3.98075 12.971 2.81875 11.739 1.97875C10.507 1.13875 9.072 0.71875 7.434 0.71875C6.034 0.71875 4.767 1.04075 3.633 1.68475C2.513 2.31475 1.624 3.20375 0.966 4.35175ZM14.265 17.5658H0.265V20.0658H14.265V17.5658Z" fill="#007CFF"/>
+                                        </svg>
 
+                                </div>
+
+                                <div class="rooms">
+
+                                    <span>Комнат:</span> 3
+                                </div>
+                                <div class="area"><span class="ui">УИ</span> 62<span>м2</span></div>
+
+                                <div class="status_ad">
+                                    Срочно!
+                                </div>
+                                <div class="ad_geo">
+                                    <img src="./img/icon/Location.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_center_line ad_line">
+                                Продаю квартиру 104 серии в <br> 3 мкр 4\4 этаж
+                                <div class="ad_img">
+                                    <img src="./img/icon/image.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_bottom_line flex_da ad_line">
+                                <div class="ad_date">9 февраля</div>
+                                <div class="view_info flex_da">
+                                    <img src="./img/icon/visibility.svg" alt=""> 400
+                                </div>
+                                <div class="ad_function">
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_1518_18484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="29">
+                                            <rect y="0.395508" width="28" height="28" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_1518_18484)">
+                                            <path d="M2.33337 28.3952V23.7285H25.6667V28.3952H2.33337ZM7.00004 19.0618H8.63337L17.7334 9.99102L16.0709 8.32852L7.00004 17.4285V19.0618ZM4.66671 21.3952V16.4368L17.7334 3.39935C17.9473 3.18546 18.1952 3.02018 18.4771 2.90352C18.7591 2.78685 19.0556 2.72852 19.3667 2.72852C19.6778 2.72852 19.9792 2.78685 20.2709 2.90352C20.5625 3.02018 20.825 3.19518 21.0584 3.42852L22.6625 5.06185C22.8959 5.27574 23.066 5.52852 23.173 5.82018C23.2799 6.11185 23.3334 6.41324 23.3334 6.72435C23.3334 7.01602 23.2799 7.30282 23.173 7.58477C23.066 7.86671 22.8959 8.12435 22.6625 8.35768L9.62504 21.3952H4.66671Z" fill="#B4B4B4"/>
+                                            </g>
+                                            </svg>
+                                            
+                                    </button>
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4089 14.9159C2.15707 11.0076 3.62124 6.14844 7.7244 4.82778C9.88274 4.13128 12.5462 4.71228 14.0594 6.79944C15.4862 4.63528 18.2267 4.13594 20.3827 4.82778C24.4847 6.14844 25.9571 11.0076 24.7064 14.9159C22.7581 21.1109 15.9599 24.3379 14.0594 24.3379C12.1601 24.3379 5.42257 21.1833 3.4089 14.9159Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18.42 9.21973C19.8282 9.36439 20.709 10.4809 20.6565 12.0454" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            
+                                        </button>
+                                </div>
+                            </div>
+                            <div class="ad_fon">
+                                <img src="./img/icon/mode_heat.svg" alt="">
+                            </div>
+                            <div class="ad_widget">
+                                <img src="./img/hot_widget.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ad_info ad_vip">
+                        <div class="ad_card ">
+                            <div class="ad_top_line ad_line flex_da">
+                                <div class="price flex_da">
+                                    6,5 млн
+                                    <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.966 4.35175C0.322 5.48575 0 6.77375 0 8.21575C0 9.65775 0.322 10.9458 0.966 12.0798C1.624 13.2137 2.513 14.1027 3.633 14.7467C4.767 15.3767 6.034 15.6918 7.434 15.6918C9.086 15.6918 10.521 15.2788 11.739 14.4528C12.971 13.6128 13.832 12.4438 14.322 10.9458H10.941C10.605 11.6458 10.129 12.1777 9.513 12.5417C8.911 12.8918 8.211 13.0668 7.413 13.0668C6.559 13.0668 5.796 12.8708 5.124 12.4788C4.466 12.0728 3.948 11.5057 3.57 10.7778C3.206 10.0357 3.024 9.18175 3.024 8.21575C3.024 7.23575 3.206 6.38175 3.57 5.65375C3.948 4.92575 4.466 4.36575 5.124 3.97375C5.796 3.56775 6.559 3.36475 7.413 3.36475C8.211 3.36475 8.911 3.53975 9.513 3.88975C10.129 4.23975 10.605 4.76475 10.941 5.46475H14.322C13.832 3.98075 12.971 2.81875 11.739 1.97875C10.507 1.13875 9.072 0.71875 7.434 0.71875C6.034 0.71875 4.767 1.04075 3.633 1.68475C2.513 2.31475 1.624 3.20375 0.966 4.35175ZM14.265 17.5658H0.265V20.0658H14.265V17.5658Z" fill="#007CFF"/>
+                                        </svg>
+
+                                </div>
+
+                                <div class="rooms">
+
+                                    <span>Комнат:</span> 3
+                                </div>
+                                <div class="area"><span class="ui">УИ</span> 62<span>м2</span></div>
+
+                                <div class="status_ad">
+                                    Срочно!
+                                </div>
+                                <div class="ad_geo">
+                                    <img src="./img/icon/Location.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_center_line ad_line">
+                                Продаю квартиру 104 серии в <br> 3 мкр 4\4 этаж
+                                <div class="ad_img">
+                                    <img src="./img/icon/image.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_bottom_line flex_da ad_line">
+                                <div class="ad_date">9 февраля</div>
+                                <div class="view_info flex_da">
+                                    <img src="./img/icon/visibility.svg" alt=""> 400
+                                </div>
+                                <div class="ad_function">
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_1518_18484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="29">
+                                            <rect y="0.395508" width="28" height="28" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_1518_18484)">
+                                            <path d="M2.33337 28.3952V23.7285H25.6667V28.3952H2.33337ZM7.00004 19.0618H8.63337L17.7334 9.99102L16.0709 8.32852L7.00004 17.4285V19.0618ZM4.66671 21.3952V16.4368L17.7334 3.39935C17.9473 3.18546 18.1952 3.02018 18.4771 2.90352C18.7591 2.78685 19.0556 2.72852 19.3667 2.72852C19.6778 2.72852 19.9792 2.78685 20.2709 2.90352C20.5625 3.02018 20.825 3.19518 21.0584 3.42852L22.6625 5.06185C22.8959 5.27574 23.066 5.52852 23.173 5.82018C23.2799 6.11185 23.3334 6.41324 23.3334 6.72435C23.3334 7.01602 23.2799 7.30282 23.173 7.58477C23.066 7.86671 22.8959 8.12435 22.6625 8.35768L9.62504 21.3952H4.66671Z" fill="#B4B4B4"/>
+                                            </g>
+                                            </svg>
+                                            
+                                    </button>
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4089 14.9159C2.15707 11.0076 3.62124 6.14844 7.7244 4.82778C9.88274 4.13128 12.5462 4.71228 14.0594 6.79944C15.4862 4.63528 18.2267 4.13594 20.3827 4.82778C24.4847 6.14844 25.9571 11.0076 24.7064 14.9159C22.7581 21.1109 15.9599 24.3379 14.0594 24.3379C12.1601 24.3379 5.42257 21.1833 3.4089 14.9159Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18.42 9.21973C19.8282 9.36439 20.709 10.4809 20.6565 12.0454" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            
+                                        </button>
+                                </div>
+                            </div>
+                            <div class="ad_fon">
+                                <img src="./img/crown.svg" alt="">
+                            </div>
+                            <div class="ad_widget">
+                                <img src="./img/vip_widget.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad_info ad_top">
+                        <div class="ad_card ">
+                            <div class="ad_top_line ad_line flex_da">
+                                <div class="price flex_da">
+                                    6,5 млн
+                                    <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.966 4.35175C0.322 5.48575 0 6.77375 0 8.21575C0 9.65775 0.322 10.9458 0.966 12.0798C1.624 13.2137 2.513 14.1027 3.633 14.7467C4.767 15.3767 6.034 15.6918 7.434 15.6918C9.086 15.6918 10.521 15.2788 11.739 14.4528C12.971 13.6128 13.832 12.4438 14.322 10.9458H10.941C10.605 11.6458 10.129 12.1777 9.513 12.5417C8.911 12.8918 8.211 13.0668 7.413 13.0668C6.559 13.0668 5.796 12.8708 5.124 12.4788C4.466 12.0728 3.948 11.5057 3.57 10.7778C3.206 10.0357 3.024 9.18175 3.024 8.21575C3.024 7.23575 3.206 6.38175 3.57 5.65375C3.948 4.92575 4.466 4.36575 5.124 3.97375C5.796 3.56775 6.559 3.36475 7.413 3.36475C8.211 3.36475 8.911 3.53975 9.513 3.88975C10.129 4.23975 10.605 4.76475 10.941 5.46475H14.322C13.832 3.98075 12.971 2.81875 11.739 1.97875C10.507 1.13875 9.072 0.71875 7.434 0.71875C6.034 0.71875 4.767 1.04075 3.633 1.68475C2.513 2.31475 1.624 3.20375 0.966 4.35175ZM14.265 17.5658H0.265V20.0658H14.265V17.5658Z" fill="#007CFF"/>
+                                        </svg>
+
+                                </div>
+
+                                <div class="rooms">
+
+                                    <span>Комнат:</span> 3
+                                </div>
+                                <div class="area"><span class="ui">УИ</span> 62<span>м2</span></div>
+
+                                <div class="status_ad">
+                                    Срочно!
+                                </div>
+                                <div class="ad_geo">
+                                    <img src="./img/icon/Location.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_center_line ad_line">
+                                Продаю квартиру 104 серии в <br> 3 мкр 4\4 этаж
+                                <div class="ad_img">
+                                    <img src="./img/icon/image.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_bottom_line flex_da ad_line">
+                                <div class="ad_date">9 февраля</div>
+                                <div class="view_info flex_da">
+                                    <img src="./img/icon/visibility.svg" alt=""> 400
+                                </div>
+                                <div class="ad_function">
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_1518_18484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="29">
+                                            <rect y="0.395508" width="28" height="28" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_1518_18484)">
+                                            <path d="M2.33337 28.3952V23.7285H25.6667V28.3952H2.33337ZM7.00004 19.0618H8.63337L17.7334 9.99102L16.0709 8.32852L7.00004 17.4285V19.0618ZM4.66671 21.3952V16.4368L17.7334 3.39935C17.9473 3.18546 18.1952 3.02018 18.4771 2.90352C18.7591 2.78685 19.0556 2.72852 19.3667 2.72852C19.6778 2.72852 19.9792 2.78685 20.2709 2.90352C20.5625 3.02018 20.825 3.19518 21.0584 3.42852L22.6625 5.06185C22.8959 5.27574 23.066 5.52852 23.173 5.82018C23.2799 6.11185 23.3334 6.41324 23.3334 6.72435C23.3334 7.01602 23.2799 7.30282 23.173 7.58477C23.066 7.86671 22.8959 8.12435 22.6625 8.35768L9.62504 21.3952H4.66671Z" fill="#B4B4B4"/>
+                                            </g>
+                                            </svg>
+                                            
+                                    </button>
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4089 14.9159C2.15707 11.0076 3.62124 6.14844 7.7244 4.82778C9.88274 4.13128 12.5462 4.71228 14.0594 6.79944C15.4862 4.63528 18.2267 4.13594 20.3827 4.82778C24.4847 6.14844 25.9571 11.0076 24.7064 14.9159C22.7581 21.1109 15.9599 24.3379 14.0594 24.3379C12.1601 24.3379 5.42257 21.1833 3.4089 14.9159Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18.42 9.21973C19.8282 9.36439 20.709 10.4809 20.6565 12.0454" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            
+                                        </button>
+                                </div>
+                            </div>
+                            <div class="ad_fon">
+                                <img src="./img/kid_star.svg" alt="">
+                            </div>
+                            <div class="ad_widget">
+                                <img src="./img/top_widget.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad_info ">
+                        <div class="ad_card ">
+                            <div class="ad_top_line ad_line flex_da">
+                                <div class="price flex_da">
+                                    6,5 млн
+                                    <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.966 4.35175C0.322 5.48575 0 6.77375 0 8.21575C0 9.65775 0.322 10.9458 0.966 12.0798C1.624 13.2137 2.513 14.1027 3.633 14.7467C4.767 15.3767 6.034 15.6918 7.434 15.6918C9.086 15.6918 10.521 15.2788 11.739 14.4528C12.971 13.6128 13.832 12.4438 14.322 10.9458H10.941C10.605 11.6458 10.129 12.1777 9.513 12.5417C8.911 12.8918 8.211 13.0668 7.413 13.0668C6.559 13.0668 5.796 12.8708 5.124 12.4788C4.466 12.0728 3.948 11.5057 3.57 10.7778C3.206 10.0357 3.024 9.18175 3.024 8.21575C3.024 7.23575 3.206 6.38175 3.57 5.65375C3.948 4.92575 4.466 4.36575 5.124 3.97375C5.796 3.56775 6.559 3.36475 7.413 3.36475C8.211 3.36475 8.911 3.53975 9.513 3.88975C10.129 4.23975 10.605 4.76475 10.941 5.46475H14.322C13.832 3.98075 12.971 2.81875 11.739 1.97875C10.507 1.13875 9.072 0.71875 7.434 0.71875C6.034 0.71875 4.767 1.04075 3.633 1.68475C2.513 2.31475 1.624 3.20375 0.966 4.35175ZM14.265 17.5658H0.265V20.0658H14.265V17.5658Z" fill="#007CFF"/>
+                                        </svg>
+
+                                </div>
+
+                                <div class="rooms">
+
+                                    <span>Комнат:</span> 3
+                                </div>
+                                <div class="area"><span class="ui">УИ</span> 62<span>м2</span></div>
+
+                                <div class="status_ad">
+                                    Срочно!
+                                </div>
+                                <div class="ad_geo">
+                                    <img src="./img/icon/Location.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_center_line ad_line">
+                                Продаю квартиру 104 серии в <br> 3 мкр 4\4 этаж
+                                <div class="ad_img">
+                                    <img src="./img/icon/image.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad_bottom_line flex_da ad_line">
+                                <div class="ad_date">9 февраля</div>
+                                <div class="view_info flex_da">
+                                    <img src="./img/icon/visibility.svg" alt=""> 400
+                                </div>
+                                <div class="ad_function">
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_1518_18484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="29">
+                                            <rect y="0.395508" width="28" height="28" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_1518_18484)">
+                                            <path d="M2.33337 28.3952V23.7285H25.6667V28.3952H2.33337ZM7.00004 19.0618H8.63337L17.7334 9.99102L16.0709 8.32852L7.00004 17.4285V19.0618ZM4.66671 21.3952V16.4368L17.7334 3.39935C17.9473 3.18546 18.1952 3.02018 18.4771 2.90352C18.7591 2.78685 19.0556 2.72852 19.3667 2.72852C19.6778 2.72852 19.9792 2.78685 20.2709 2.90352C20.5625 3.02018 20.825 3.19518 21.0584 3.42852L22.6625 5.06185C22.8959 5.27574 23.066 5.52852 23.173 5.82018C23.2799 6.11185 23.3334 6.41324 23.3334 6.72435C23.3334 7.01602 23.2799 7.30282 23.173 7.58477C23.066 7.86671 22.8959 8.12435 22.6625 8.35768L9.62504 21.3952H4.66671Z" fill="#B4B4B4"/>
+                                            </g>
+                                            </svg>
+                                            
+                                    </button>
+                                    <button>
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4089 14.9159C2.15707 11.0076 3.62124 6.14844 7.7244 4.82778C9.88274 4.13128 12.5462 4.71228 14.0594 6.79944C15.4862 4.63528 18.2267 4.13594 20.3827 4.82778C24.4847 6.14844 25.9571 11.0076 24.7064 14.9159C22.7581 21.1109 15.9599 24.3379 14.0594 24.3379C12.1601 24.3379 5.42257 21.1833 3.4089 14.9159Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18.42 9.21973C19.8282 9.36439 20.709 10.4809 20.6565 12.0454" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="more_btn">Загрузить еще...</button>
+                </div>
             </div>
         </div>
 
