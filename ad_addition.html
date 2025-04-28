@@ -199,10 +199,10 @@
                                     <h3>Площадь, м²</h3>
                                     <div class="area-inputs">
                                         <div>
-                                            <input type="number" class="category-input" placeholder="Общая">
+                                            <input type="text" class="category-input" placeholder="Общая">
                                         </div>
                                         <div>
-                                            <input type="number" class="category-input" placeholder="Кухни">
+                                            <input type="text" class="category-input" placeholder="Кухни">
                                         </div>
                                     </div>
                                 </div>
@@ -244,14 +244,130 @@
                                 <div class="double-inputs">
                                     <div>
                                         <h3>Год постройки</h3>
-                                        <input type="number" class="category-input" placeholder="2000">
+                                        <input type="text" class="category-input" placeholder="2000">
                                     </div>
                                     <div>
                                         <h3>Цена</h3>
-                                        <input type="number" class="category-input" placeholder="85 000">
+                                        <input type="text" class="category-input" placeholder="85 000">
                                     </div>
                                 </div>
                             </div>
+                            <!-- Состояние -->
+                            <div class="category-group">
+                                <h3>Состояние</h3>
+                                <select class="category-select">
+    
+      <option value="new">Новый</option>
+      <option value="renovated" selected>Не новый, но аккуратный ремонт</option>
+      <option value="needs_repair">Требует ремонта</option>
+    </select>
+                            </div>
+
+                            <!-- Санузел -->
+                            <div class="category-group">
+                                <h3>Санузел</h3>
+                                <select class="category-select">
+  
+      <option value="combined">Совмещенный</option>
+      <option value="separate" selected>Раздельный</option>
+    </select>
+                            </div>
+
+                            <!-- Балкон -->
+                            <div class="category-group">
+                                <h3>Балкон</h3>
+                                <select class="category-select">
+      <option value="balcony" selected>Балкон</option>
+      <option value="loggia">Лоджия</option>
+      <option value="none">Нет балкона</option>
+    </select>
+                            </div>
+
+                            <!-- Дверь -->
+                            <div class="category-group">
+                                <h3>Дверь</h3>
+                                <select class="category-select">
+      <option value="wooden" selected>Деревянная</option>
+      <option value="metal">Металлическая</option>
+      <option value="plastic">Пластиковая</option>
+    </select>
+                            </div>
+
+                            <!-- Парковка -->
+                            <div class="category-group">
+                                <h3>Парковка</h3>
+                                <select class="category-select">
+      <option value="parking" selected>Паркинг</option>
+      <option value="street">Уличная</option>
+      <option value="none">Нет парковки</option>
+    </select>
+                            </div>
+
+                            <!-- Меблировка -->
+                            <div class="category-group">
+                                <h3>Квартира меблирована</h3>
+                                <select class="category-select">
+      <option value="full" selected>Полностью</option>
+      <option value="partial">Частично</option>
+      <option value="none">Пустая</option>
+    </select>
+                            </div>
+
+                            <!-- Пол -->
+                            <div class="category-group">
+                                <h3>Пол</h3>
+                                <select class="category-select">
+      <option value="linoleum" selected>Линолеум</option>
+      <option value="laminate">Ламинат</option>
+      <option value="parquet">Паркет</option>
+      <option value="tile">Плитка</option>
+    </select>
+                            </div>
+                            <div class="category-group">
+                                <!-- Область для загрузки -->
+                                <div class="upload-area" id="dropArea">
+                                    <div class="upload-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007bff">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+                                    </div>
+                                    <p>Перетащите сюда фотографии или <span class="browse-link">выберите файлы</span></p>
+                                    <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                                </div>
+
+                                <!-- Превью загруженных фото -->
+                                <div class="preview-container" id="previewContainer">
+
+
+                                </div>
+                                <div class="info_add_img">
+                                    <p><svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.04961 12.4996L0.349609 6.79961L1.77461 5.37461L6.04961 9.64961L15.2246 0.474609L16.6496 1.89961L6.04961 12.4996Z" fill="#2ECF2E"/>
+                                        </svg> Добавить реальные фото объекта</p>
+                                    <p><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 20.5C8.61667 20.5 7.31667 20.2375 6.1 19.7125C4.88333 19.1875 3.825 18.475 2.925 17.575C2.025 16.675 1.3125 15.6167 0.7875 14.4C0.2625 13.1833 0 11.8833 0 10.5C0 9.11667 0.2625 7.81667 0.7875 6.6C1.3125 5.38333 2.025 4.325 2.925 3.425C3.825 2.525 4.88333 1.8125 6.1 1.2875C7.31667 0.7625 8.61667 0.5 10 0.5C11.3833 0.5 12.6833 0.7625 13.9 1.2875C15.1167 1.8125 16.175 2.525 17.075 3.425C17.975 4.325 18.6875 5.38333 19.2125 6.6C19.7375 7.81667 20 9.11667 20 10.5C20 11.8833 19.7375 13.1833 19.2125 14.4C18.6875 15.6167 17.975 16.675 17.075 17.575C16.175 18.475 15.1167 19.1875 13.9 19.7125C12.6833 20.2375 11.3833 20.5 10 20.5ZM10 18.5C10.9 18.5 11.7667 18.3542 12.6 18.0625C13.4333 17.7708 14.2 17.35 14.9 16.8L3.7 5.6C3.15 6.3 2.72917 7.06667 2.4375 7.9C2.14583 8.73333 2 9.6 2 10.5C2 12.7333 2.775 14.625 4.325 16.175C5.875 17.725 7.76667 18.5 10 18.5ZM16.3 15.4C16.85 14.7 17.2708 13.9333 17.5625 13.1C17.8542 12.2667 18 11.4 18 10.5C18 8.26667 17.225 6.375 15.675 4.825C14.125 3.275 12.2333 2.5 10 2.5C9.1 2.5 8.23333 2.64583 7.4 2.9375C6.56667 3.22917 5.8 3.65 5.1 4.2L16.3 15.4Z" fill="#FF3535"/>
+                                        </svg> В кадре не должны присудствовать люди</p>
+                                </div>
+                            </div>
+                            <div class="category-group">
+                                <h3>Выберите на карте <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5098 9.21047C11.5098 7.8292 10.3905 6.70996 9.00926 6.70996C7.629 6.70996 6.50977 7.8292 6.50977 9.21047C6.50977 10.5907 7.629 11.71 9.00926 11.71C10.3905 11.71 11.5098 10.5907 11.5098 9.21047Z" stroke="#434343" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99951 19.5C6.10148 19.5 1.5 14.4587 1.5 9.09864C1.5 4.90246 4.8571 1.5 8.99951 1.5C13.1419 1.5 16.5 4.90246 16.5 9.09864C16.5 14.4587 11.8985 19.5 8.99951 19.5Z" stroke="#434343" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </h3>
+                                <div id="map" style="width: 100%; height: 300px; border-radius: 8px; margin-bottom: 15px;"></div>
+
+
+                            </div>
+
+                            <div class="category-group">
+                                <h3>Текст объявления</h3>
+                                <textarea class="category-textarea"></textarea>
+                            </div>
+
+                            <button class="submit-btn">Продолжить</button>
                         </div>
                     </div>
                 </div>
@@ -377,6 +493,124 @@
                     this.classList.add('active');
                 }
             });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropArea = document.getElementById('dropArea');
+            const fileInput = document.getElementById('fileInput');
+            const previewContainer = document.getElementById('previewContainer');
+
+            // Обработчик для клика по области
+            dropArea.addEventListener('click', () => fileInput.click());
+
+            // Обработчики для Drag-and-Drop
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropArea.addEventListener(eventName, highlight, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, unhighlight, false);
+            });
+
+            function highlight() {
+                dropArea.classList.add('drag-over');
+            }
+
+            function unhighlight() {
+                dropArea.classList.remove('drag-over');
+            }
+
+            // Обработка загруженных файлов
+            dropArea.addEventListener('drop', handleDrop, false);
+            fileInput.addEventListener('change', handleFiles);
+
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFiles({
+                    target: {
+                        files
+                    }
+                });
+            }
+
+            function handleFiles(e) {
+                const files = e.target.files;
+                [...files].forEach(file => {
+                    if (file.type.startsWith('image/')) {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            const preview = document.createElement('div');
+                            preview.className = 'photo-preview';
+                            preview.innerHTML = `
+                    <img src="${event.target.result}" alt="Загруженное фото">
+                    <button class="delete-photo">&times;</button>
+                  `;
+                            previewContainer.appendChild(preview);
+
+                            // Обработчик удаления фото
+                            preview.querySelector('.delete-photo').addEventListener('click', () => {
+                                preview.remove();
+                            });
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+
+            // Удаление примеров превью при клике
+            document.querySelectorAll('.photo-preview .delete-photo').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.parentElement.remove();
+                });
+            });
+        });
+    </script>
+    <!-- Подключаем API Яндекс.Карт -->
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script>
+        DG.then(function() {
+            const map = DG.map('map', {
+                center: [55.75, 37.61],
+                zoom: 13
+            });
+
+            let marker;
+
+            map.on('click', function(e) {
+                const coords = e.latlng;
+
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+
+                marker = DG.marker(coords).addTo(map);
+
+                document.getElementById('latitude').value = coords.lat.toFixed(6);
+                document.getElementById('longitude').value = coords.lng.toFixed(6);
+            });
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const userCoords = [position.coords.latitude, position.coords.longitude];
+                    map.setView(userCoords, 14);
+
+                    marker = DG.marker(userCoords).addTo(map);
+
+                    document.getElementById('latitude').value = userCoords[0].toFixed(6);
+                    document.getElementById('longitude').value = userCoords[1].toFixed(6);
+                });
+            }
         });
     </script>
 </body>

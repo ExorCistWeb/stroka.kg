@@ -1297,6 +1297,9 @@ input[type="file"] {
     color: #434343;
     text-align: center;
     margin-bottom: 9.5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .ad_add {
@@ -1483,4 +1486,233 @@ input[type="radio"]:checked+.category-btn {
 .double-inputs input {
     min-width: 151px;
     text-align: center;
+}
+
+
+/* Стили для селектов */
+
+.category-select {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    background: #fff;
+    color: #878787;
+    /* Component 108 */
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    border: 1px solid #767676;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-select:hover {
+    border-color: #007bff;
+}
+
+.category-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+
+/* Стили для области загрузки */
+
+.upload-area {
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    flex-direction: column;
+    transition: all 0.3s;
+    height: 286px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px dashed #1F7EEB;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.upload-area:hover {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.upload-area.drag-over {
+    border-color: #007bff;
+    background-color: #e7f1ff;
+}
+
+.upload-icon {
+    margin-bottom: 10px;
+}
+
+.upload-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.browse-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Стили для превью фотографий */
+
+.preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.photo-preview {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delete-photo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: #FF3535;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.info_add_img {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-direction: column;
+}
+
+.info_add_img p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333333;
+}
+
+.category-textarea {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    background: #fff;
+    color: #878787;
+    /* Component 108 */
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    border: 1px solid #767676;
+    resize: none;
+    height: 177px;
+}
+
+.map-coordinates {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.coord-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.coord-input span {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.submit-btn {
+    background: #007CFF;
+    border: 1px solid #B4B4B4;
+    display: block;
+    width: 100%;
+    padding: 25px 10px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    /* identical to box height, or 75% */
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0069d9;
+}
+
+
+/* Маркер на карте */
+
+.ymap-marker {
+    background-color: #007bff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
