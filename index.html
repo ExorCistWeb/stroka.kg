@@ -7,7 +7,7 @@
     <title>Регистрация</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
@@ -214,7 +214,7 @@
                     <a href="" class="action_btn">Как сюда попасть?</a>
                 </div>
                 <div class="board">
-                    <div class="ad_info ad_hot">
+                    <div class="ad_info ad_hot" onclick="toggleAdDetails(this)">
                         <div class="ad_card ">
                             <div class="ad_top_line ad_line flex_da">
                                 <div class="price flex_da">
@@ -242,6 +242,138 @@
                                 Продаю квартиру 104 серии в <br> 3 мкр 4\4 этаж
                                 <div class="ad_img">
                                     <img src="./img/icon/image.svg" alt="">
+                                </div>
+                            </div>
+                            <!-- Блок с подробной информацией (изначально скрыт) -->
+                            <div class="ad_details" style="display: none;">
+                                <div class="ad_details_content">
+                                    <div class="ad_details_flex">
+                                        <!-- Галерея фотографий с Fancybox -->
+
+
+                                        <!-- Основная информация -->
+                                        <div class="detail_section">
+                                            <div class="detail_item price_item">
+                                                <strong>Цена:</strong> 74 000$
+                                            </div>
+                                            <div class="detail_item contact_item">
+                                                <strong>Телефон:</strong>
+                                                <a href="tel:0999577792">0(999)57-77-92</a>
+                                            </div>
+                                            <div class="detail_item">
+                                                <strong>Комнат:</strong> 3 (104 серия)
+                                            </div>
+                                            <div class="detail_item">
+                                                <strong>Площадь:</strong> 62 м²
+                                            </div>
+                                            <div class="detail_item">
+                                                <strong>Отопление:</strong> центральное
+                                            </div>
+                                            <div class="detail_item">
+                                                <strong>Этаж:</strong> 4 из 4
+                                            </div>
+                                            <div class="detail_item">
+                                                <strong> Частично с мебелью, Евроремонт</strong>
+                                            </div>
+                                        </div>
+                                        <div class="ad_gallery">
+                                            <!-- Главное фото (открывается в Fancybox) -->
+                                            <a href="./img/example.png" data-fancybox="gallery" data-caption="Главное фото квартиры">
+                                                <img src="./img/example.png" alt="Главное фото квартиры" class="gallery_main_img">
+                                            </a>
+
+                                            <!-- Миниатюры (скрытые для Fancybox) -->
+                                            <div class="thumbnail_container">
+                                                <a href="./img/example.png" data-fancybox="gallery" data-caption="Фото квартиры 1" style="display:none;"></a>
+                                                <a href="./img/example.png" data-fancybox="gallery" data-caption="Фото квартиры 2" style="display:none;"></a>
+                                                <a href="./img/example.png" data-fancybox="gallery" data-caption="Фото квартиры 3" style="display:none;"></a>
+
+
+                                                <!-- Миниатюры для навигации -->
+                                                <img src="./img/example.png" alt="Фото 1" class="gallery_thumb" onclick="document.querySelector('[href=\'./img/example.png\']').click()">
+                                                <img src="./img/example.png" alt="Фото 2" class="gallery_thumb" onclick="document.querySelector('[href=\'./img/example.png\']').click()">
+                                                <img src="./img/example.png" alt="Фото 3" class="gallery_thumb" onclick="document.querySelector('[href=\'./img/example.png\']').click()">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Описание -->
+                                    <div class="description_section">
+                                        Продаётся просторная 3-комнатная квартира 104 серии – 64 м²<br> ???? Южные микрорайоны | 4 этаж | Не угловая | 85 000 $<br> ???? О квартире:<br> Просторная и светлая, с качественным свежим ремонтом<br> Площадь:
+                                        64 м², лоджия 6 м<br> Окна выходят на Юг и Север – хорошее естественное освещение<br> Большая кладовая – удобно для хранения вещей<br> Пластиковые окна, бронированные двери, натяжные потолки<br> В спальне гардеробная
+                                        и кондиционер<br> ???? Состояние дома:<br> Крыша не течёт<br> Чистый подъезд, без посторонних запахов<br> ???? Район и инфраструктура:<br> Экологически чистый и комфортный для жизни<br> В шаговой доступности: школы,
+                                        детские сады, ТЦ, супермаркеты, кафе, парки отдыха<br> ✨ Наша уютная квартира ждёт своих новых счастливых владельцев!<br> ???? Звоните: 0999 577792 Темирлан
+                                    </div>
+
+                                    <div class="dgis-map-container" data-lat="42.8679" data-lon="74.6129" data-title="3-комнатная квартира в 3 мкр" data-address="Кыргызстан, Бишкек, 3 микрорайон, дом 15" data-price="74 000$" data-floor="4/4">
+                                        <div class="dgis-map" style="width: 100%; height: 300px;"></div>
+
+                                    </div>
+                                    <!-- Контактная информация -->
+                                    <div class="ad_contacts_section">
+                                        <div class="owner_info">
+                                            <!-- Кнопка "Написать сообщение" -->
+                                            <button class="message_button">
+                                            <svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19.0957 13.9314H19.1062" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.4199 13.9314H14.4304" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M9.74215 13.9314H9.75265" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7502 20.8842C19.1859 24.0765 13.9052 24.7662 9.58468 22.9774C8.94686 22.7475 4.81864 23.771 3.92288 22.9701C3.02713 22.168 4.17144 18.4718 3.91468 17.9007C1.91564 14.0334 2.68711 9.30416 6.25256 6.11286C10.804 2.0366 18.1987 2.0366 22.7502 6.11286C27.3111 10.1954 27.3017 16.809 22.7502 20.8842Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                
+                                            Написать сообщение
+                                            </button>
+
+
+                                            <span class="owner_label">Хозяин недвижимости</span>
+                                            <span class="phone_number">Телефон: <a href="tel:0999577792">0(999)57-77-92</a></span>
+                                        </div>
+
+                                        <!-- Даты создания и продления -->
+                                        <div class="dates_info">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66602 17.0343C3.66602 7.75961 6.75802 4.66895 16.0313 4.66895C25.306 4.66895 28.398 7.75961 28.398 17.0343C28.398 26.3089 25.306 29.3996 16.0313 29.3996C6.75802 29.3996 3.66602 26.3089 3.66602 17.0343Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M4.0332 12.4318H28.0439" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.9048 17.6813H21.9168" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16.0376 17.6813H16.0496" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M10.1607 17.6813H10.1727" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.9048 22.8171H21.9168" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16.0376 22.8171H16.0496" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M10.1607 22.8171H10.1727" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.3776 2.7334V7.08273" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M10.6999 2.7334V7.08273" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+
+                                            <span class="renewal_date">Дата продления: 27.02.2025</span>
+                                            <span class="creation_date">Дата создания: 25.02.2025</span>
+                                        </div>
+
+                                        <!-- Ссылка на объявление -->
+                                        <div class="ad_link">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3234 16.5843C15.3234 16.5843 -0.645445 13.2808 4.90382 10.0774C9.58669 7.37436 25.7253 2.72696 27.98 3.92776C29.1808 6.18242 24.5334 22.321 21.8303 27.0039C18.6269 32.5532 15.3234 16.5843 15.3234 16.5843Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M15.3242 16.5843L27.9808 3.92773" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+
+                                            <span>Ссылка на это объявление:</span>
+                                            <a href="https://stroka.kg/?page=topic-view&topic_id=1075129" target="_blank">
+                                                https://stroka.kg/?page=topic-view&topic_id=1075129
+                                            </a>
+                                        </div>
+
+                                        <!-- Кнопки действий -->
+                                        <div class="action_buttons">
+                                            <button class="action_button complain_button"> <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.4993 20.6665C13.8771 20.6665 14.1938 20.5387 14.4493 20.2832C14.7049 20.0276 14.8327 19.7109 14.8327 19.3332C14.8327 18.9554 14.7049 18.6387 14.4493 18.3832C14.1938 18.1276 13.8771 17.9998 13.4993 17.9998C13.1216 17.9998 12.8049 18.1276 12.5493 18.3832C12.2938 18.6387 12.166 18.9554 12.166 19.3332C12.166 19.7109 12.2938 20.0276 12.5493 20.2832C12.8049 20.5387 13.1216 20.6665 13.4993 20.6665ZM12.166 15.3332H14.8327V7.33317H12.166V15.3332ZM13.4993 27.3332C11.6549 27.3332 9.92157 26.9832 8.29935 26.2832C6.67713 25.5832 5.26602 24.6332 4.06602 23.4332C2.86602 22.2332 1.91602 20.8221 1.21602 19.1998C0.516016 17.5776 0.166016 15.8443 0.166016 13.9998C0.166016 12.1554 0.516016 10.4221 1.21602 8.79984C1.91602 7.17761 2.86602 5.7665 4.06602 4.5665C5.26602 3.3665 6.67713 2.4165 8.29935 1.7165C9.92157 1.0165 11.6549 0.666504 13.4993 0.666504C15.3438 0.666504 17.0771 1.0165 18.6993 1.7165C20.3216 2.4165 21.7327 3.3665 22.9327 4.5665C24.1327 5.7665 25.0827 7.17761 25.7827 8.79984C26.4827 10.4221 26.8327 12.1554 26.8327 13.9998C26.8327 15.8443 26.4827 17.5776 25.7827 19.1998C25.0827 20.8221 24.1327 22.2332 22.9327 23.4332C21.7327 24.6332 20.3216 25.5832 18.6993 26.2832C17.0771 26.9832 15.3438 27.3332 13.4993 27.3332ZM13.4993 24.6665C16.4771 24.6665 18.9993 23.6332 21.066 21.5665C23.1327 19.4998 24.166 16.9776 24.166 13.9998C24.166 11.0221 23.1327 8.49984 21.066 6.43317C18.9993 4.3665 16.4771 3.33317 13.4993 3.33317C10.5216 3.33317 7.99935 4.3665 5.93268 6.43317C3.86602 8.49984 2.83268 11.0221 2.83268 13.9998C2.83268 16.9776 3.86602 19.4998 5.93268 21.5665C7.99935 23.6332 10.5216 24.6665 13.4993 24.6665Z" fill="#FF3535"/>
+                                                </svg>
+                                                 Пожаловаться</button>
+                                            <button class="action_button note_button"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.5 22V18H20.5V22H0.5ZM4.5 14H5.9L13.7 6.225L12.275 4.8L4.5 12.6V14ZM2.5 16V11.75L13.7 0.575C13.8833 0.391667 14.0958 0.25 14.3375 0.15C14.5792 0.05 14.8333 0 15.1 0C15.3667 0 15.625 0.05 15.875 0.15C16.125 0.25 16.35 0.4 16.55 0.6L17.925 2C18.125 2.18333 18.2708 2.4 18.3625 2.65C18.4542 2.9 18.5 3.15833 18.5 3.425C18.5 3.675 18.4542 3.92083 18.3625 4.1625C18.2708 4.40417 18.125 4.625 17.925 4.825L6.75 16H2.5Z" fill="#434343"/>
+                                                </svg>
+                                                 Оставить заметку</button>
+                                            <button class="action_button other_button">Другое</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="ad_bottom_line flex_da ad_line">
@@ -277,6 +409,7 @@
                                 <img src="./img/hot_widget.svg" alt="">
                             </div>
                         </div>
+
                     </div>
 
                     <div class="ad_info ad_vip">
@@ -558,6 +691,83 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script>
+        function toggleAdDetails(element) {
+            if (event.target.closest('button')) return;
+
+            const details = element.querySelector('.ad_details');
+            const centerLine = element.querySelector('.ad_center_line');
+            const isShowing = details.style.display === 'none';
+
+            details.style.display = isShowing ? 'block' : 'none';
+
+            if (isShowing) {
+                centerLine.classList.add('hidden');
+            } else {
+                centerLine.classList.remove('hidden');
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // Инициализация Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Настройки Fancybox
+            Thumbs: {
+                type: "classic",
+            },
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [
+                        "zoomIn",
+                        "zoomOut",
+                        "toggle1to1",
+                        "rotateCCW",
+                        "rotateCW",
+                        "flipX",
+                        "flipY",
+                    ],
+                    right: ["slideshow", "thumbs", "close"],
+                },
+            },
+        });
+    </script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация всех карт после загрузки API
+            DG.then(function() {
+                const mapContainers = document.querySelectorAll('.dgis-map-container');
+
+                mapContainers.forEach(container => {
+                    const lat = parseFloat(container.dataset.lat);
+                    const lon = parseFloat(container.dataset.lon);
+                    const mapElement = container.querySelector('.dgis-map');
+
+                    // Создаем карту
+                    const map = DG.map(mapElement, {
+                        center: [lat, lon],
+                        zoom: 16
+                    });
+
+                    // Добавляем маркер
+                    DG.marker([lat, lon], {
+                            title: container.dataset.title
+                        })
+                        .addTo(map)
+                        .bindPopup(`
+            <strong>${container.dataset.title}</strong><br>
+            ${container.dataset.address}<br>
+            <b>Цена:</b> ${container.dataset.price}<br>
+            <b>Этаж:</b> ${container.dataset.floor}
+          `);
+
+
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
