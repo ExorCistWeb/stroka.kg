@@ -2783,3 +2783,70 @@ input[type="radio"]:checked+.category-btn {
     gap: 12px;
     margin-top: 30px;
 }
+
+.save_page_title {
+    margin: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.no_save {
+    display: flex;
+    gap: 30px
+}
+
+.save_page_content {
+    padding-top: 30px;
+}
+
+.save_page_info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.save {
+    width: 100%;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.save_info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.save_info h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    color: #007CFF;
+}
+
+.delete_btn {
+    background: none;
+    cursor: pointer;
+}
+
+.save_flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.save_flex span {
+    padding: 8px;
+    gap: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+}
