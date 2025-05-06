@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header_top">
+            <div class="wrapper">
+                <div class="header_top_content flex_daj">
+                    <ul class="flex_da">
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Продажа</a></li>
+                        <li><a href="">Аренда</a></li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Компании</a></li>
+                        <li><a href="">Реклама</a></li>
+                    </ul>
+                    <div class="header_top_parameters flex_da">
+                        <div class="language-switcher">
+                            <select id="language-select">
+                                <option value="ru" selected>RU</option>
+                                <option value="en">EN</option>
+                                <option value="de">KG</option>
+                            </select>
+                        </div>
+                        <a href="#" class="favorites flex_da">
+                            <img src="./img/icon/Heart.svg" alt=""> Избранное
+                        </a>
+                        <button class="profile flex_da profile-btn">
+                            <img src="./img/icon/Profile.svg" alt=""> Личный кабинет
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="header_bottom ">
+            <div class="wrapper">
+                <div class="header_bottom_content flex_daj">
+
+                    <a class="logo" href="/"><img src="./img/logo.svg" alt=""></a>
+
+                    <div class="header_bottom_settings flex_daj">
+                        <div class="filter_parameters flex_da">
+                            <select id="">
+                                <option value="Квартира" selected>Квартира</option>
+                                <option value="Квартира">Квартира</option>
+                                <option value="Квартира">Квартира</option>
+                            </select>
+                            <select id="">
+                                <option value="Купить" selected>Купить</option>
+                                <option value="Купить">Купить</option>
+                                <option value="Купить">Купить</option>
+                            </select>
+                            <select id="">
+                                <option value="Комнаты" selected>Комнаты</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="header_bottom_btn flex_da">
+                            <button class="all_filters flex_da">
+                                <img src="./img/icon/Filter.svg" alt="">
+                                Все фильтры
+                            </button>
+                            <button class="sell_ad flex_da">
+                                <img src="./img/icon/Plus.svg" alt="">
+                                Продать объявление 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lk_modal">
+
+            <div class="lk_head">
+                <h5>Профиль</h5>
+            </div>
+            <div class="lk_modal_content">
+                <div class="lk_info">
+                    <div class="avatar">
+                        <img src="./img/avatar.png" alt="">
+                    </div>
+                    <div class="name">Максим Поляский Олегович</div>
+                    <div class="edit_avatar">
+                        <label for="fileInput" class="custom-file-button">
+                            Изменить фото
+                        </label>
+                        <input type="file" id="fileInput" style="display: none;" />
+                    </div>
+                </div>
+                <div class="balance">
+                    <div class="balance_info">
+                        <h6>Баланс</h6>
+                        <span>0</span>
+                    </div>
+                    <a href="" class="balance_btn">Пополнить</a>
+                </div>
+                <a href="" class="my_ads_btn"><img src="./img/icon/Plus.svg" alt="">Мои объявления</a>
+                <a href="" class="my_message_btn"><svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5957 11.9314H17.6062" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.9189 11.9314H12.9294" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.24117 11.9314H8.25167" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2492 18.8842C17.6849 22.0765 12.4042 22.7662 8.0837 20.9774C7.44588 20.7475 3.31766 21.771 2.42191 20.9701C1.52615 20.168 2.67047 16.4718 2.4137 15.9007C0.414661 12.0334 1.18614 7.30416 4.75158 4.11286C9.30306 0.0365997 16.6977 0.0365997 21.2492 4.11286C25.8101 8.19541 25.8007 14.809 21.2492 18.8842Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Мои сообщения</a>
+                <div class="lk_menu">
+                    <ul>
+                        <li><a href=""><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18.5V16.5H17V9.4C17 7.45 16.3208 5.79583 14.9625 4.4375C13.6042 3.07917 11.95 2.4 10 2.4C8.05 2.4 6.39583 3.07917 5.0375 4.4375C3.67917 5.79583 3 7.45 3 9.4V15.5H2C1.45 15.5 0.979167 15.3042 0.5875 14.9125C0.195833 14.5208 0 14.05 0 13.5V11.5C0 11.15 0.0875 10.8208 0.2625 10.5125C0.4375 10.2042 0.683333 9.95833 1 9.775L1.075 8.45C1.20833 7.31667 1.5375 6.26667 2.0625 5.3C2.5875 4.33333 3.24583 3.49167 4.0375 2.775C4.82917 2.05833 5.7375 1.5 6.7625 1.1C7.7875 0.7 8.86667 0.5 10 0.5C11.1333 0.5 12.2083 0.7 13.225 1.1C14.2417 1.5 15.15 2.05417 15.95 2.7625C16.75 3.47083 17.4083 4.30833 17.925 5.275C18.4417 6.24167 18.775 7.29167 18.925 8.425L19 9.725C19.3167 9.875 19.5625 10.1 19.7375 10.4C19.9125 10.7 20 11.0167 20 11.35V13.65C20 13.9833 19.9125 14.3 19.7375 14.6C19.5625 14.9 19.3167 15.125 19 15.275V16.5C19 17.05 18.8042 17.5208 18.4125 17.9125C18.0208 18.3042 17.55 18.5 17 18.5H9ZM7 11.5C6.71667 11.5 6.47917 11.4042 6.2875 11.2125C6.09583 11.0208 6 10.7833 6 10.5C6 10.2167 6.09583 9.97917 6.2875 9.7875C6.47917 9.59583 6.71667 9.5 7 9.5C7.28333 9.5 7.52083 9.59583 7.7125 9.7875C7.90417 9.97917 8 10.2167 8 10.5C8 10.7833 7.90417 11.0208 7.7125 11.2125C7.52083 11.4042 7.28333 11.5 7 11.5ZM13 11.5C12.7167 11.5 12.4792 11.4042 12.2875 11.2125C12.0958 11.0208 12 10.7833 12 10.5C12 10.2167 12.0958 9.97917 12.2875 9.7875C12.4792 9.59583 12.7167 9.5 13 9.5C13.2833 9.5 13.5208 9.59583 13.7125 9.7875C13.9042 9.97917 14 10.2167 14 10.5C14 10.7833 13.9042 11.0208 13.7125 11.2125C13.5208 11.4042 13.2833 11.5 13 11.5ZM4.025 9.95C3.90833 8.18333 4.44167 6.66667 5.625 5.4C6.80833 4.13333 8.28333 3.5 10.05 3.5C11.5333 3.5 12.8375 3.97083 13.9625 4.9125C15.0875 5.85417 15.7667 7.05833 16 8.525C14.4833 8.50833 13.0875 8.1 11.8125 7.3C10.5375 6.5 9.55833 5.41667 8.875 4.05C8.60833 5.38333 8.04583 6.57083 7.1875 7.6125C6.32917 8.65417 5.275 9.43333 4.025 9.95Z" fill="#007CFF"/>
+                            </svg>
+                            Поддержка</a></li>
+                        <li><a href=""><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 18.5C1.45 18.5 0.979167 18.3042 0.5875 17.9125C0.195833 17.5208 0 17.05 0 16.5V2.5C0 1.95 0.195833 1.47917 0.5875 1.0875C0.979167 0.695833 1.45 0.5 2 0.5H16C16.55 0.5 17.0208 0.695833 17.4125 1.0875C17.8042 1.47917 18 1.95 18 2.5V5H16V2.5H2V16.5H16V14H18V16.5C18 17.05 17.8042 17.5208 17.4125 17.9125C17.0208 18.3042 16.55 18.5 16 18.5H2ZM10 14.5C9.45 14.5 8.97917 14.3042 8.5875 13.9125C8.19583 13.5208 8 13.05 8 12.5V6.5C8 5.95 8.19583 5.47917 8.5875 5.0875C8.97917 4.69583 9.45 4.5 10 4.5H17C17.55 4.5 18.0208 4.69583 18.4125 5.0875C18.8042 5.47917 19 5.95 19 6.5V12.5C19 13.05 18.8042 13.5208 18.4125 13.9125C18.0208 14.3042 17.55 14.5 17 14.5H10ZM17 12.5V6.5H10V12.5H17ZM13 11C13.4167 11 13.7708 10.8542 14.0625 10.5625C14.3542 10.2708 14.5 9.91667 14.5 9.5C14.5 9.08333 14.3542 8.72917 14.0625 8.4375C13.7708 8.14583 13.4167 8 13 8C12.5833 8 12.2292 8.14583 11.9375 8.4375C11.6458 8.72917 11.5 9.08333 11.5 9.5C11.5 9.91667 11.6458 10.2708 11.9375 10.5625C12.2292 10.8542 12.5833 11 13 11Z" fill="#007CFF"/>
+                            </svg>
+                            История счета</a></li>
+                        <li><svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 16.5C1.45 16.5 0.979167 16.3042 0.5875 15.9125C0.195833 15.5208 0 15.05 0 14.5V2.5C0 1.95 0.195833 1.47917 0.5875 1.0875C0.979167 0.695833 1.45 0.5 2 0.5H18C18.55 0.5 19.0208 0.695833 19.4125 1.0875C19.8042 1.47917 20 1.95 20 2.5V14.5C20 15.05 19.8042 15.5208 19.4125 15.9125C19.0208 16.3042 18.55 16.5 18 16.5H2ZM10 9.5L2 4.5V14.5H18V4.5L10 9.5ZM10 7.5L18 2.5H2L10 7.5ZM2 4.5V2.5V14.5V4.5Z" fill="#007CFF"/>
+                            </svg> makspolo142@gmail.com
+                        </li>
+                        <li><svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8V6H11V8H3ZM2 22C1.45 22 0.979167 21.8042 0.5875 21.4125C0.195833 21.0208 0 20.55 0 20V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H12C12.55 0 13.0208 0.195833 13.4125 0.5875C13.8042 0.979167 14 1.45 14 2V20C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22H2ZM2 19V20H12V19H2ZM2 17H12V5H2V17ZM2 3H12V2H2V3Z" fill="#007CFF"/>
+                            </svg> +996550692222
+                        </li>
+                        <li><a href=""><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 14.5H11V12.5H4V14.5ZM4 10.5H14V8.5H4V10.5ZM4 6.5H14V4.5H4V6.5ZM2 18.5C1.45 18.5 0.979167 18.3042 0.5875 17.9125C0.195833 17.5208 0 17.05 0 16.5V2.5C0 1.95 0.195833 1.47917 0.5875 1.0875C0.979167 0.695833 1.45 0.5 2 0.5H16C16.55 0.5 17.0208 0.695833 17.4125 1.0875C17.8042 1.47917 18 1.95 18 2.5V16.5C18 17.05 17.8042 17.5208 17.4125 17.9125C17.0208 18.3042 16.55 18.5 16 18.5H2ZM2 16.5H16V2.5H2V16.5Z" fill="#007CFF"/>
+                            </svg>
+                            Договоры и правила</a></li>
+                        <li><a href=""><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10.5C8.28333 10.5 8.52083 10.4042 8.7125 10.2125C8.90417 10.0208 9 9.78333 9 9.5C9 9.21667 8.90417 8.97917 8.7125 8.7875C8.52083 8.59583 8.28333 8.5 8 8.5C7.71667 8.5 7.47917 8.59583 7.2875 8.7875C7.09583 8.97917 7 9.21667 7 9.5C7 9.78333 7.09583 10.0208 7.2875 10.2125C7.47917 10.4042 7.71667 10.5 8 10.5ZM4 18.5V16.5L10 15.5V4.375C10 4.125 9.925 3.9 9.775 3.7C9.625 3.5 9.43333 3.38333 9.2 3.35L4 2.5V0.5L9.5 1.4C10.2333 1.53333 10.8333 1.875 11.3 2.425C11.7667 2.975 12 3.61667 12 4.35V17.15L4 18.5ZM0 18.5V16.5H2V2.5C2 1.93333 2.19583 1.45833 2.5875 1.075C2.97917 0.691667 3.45 0.5 4 0.5H14C14.5667 0.5 15.0417 0.691667 15.425 1.075C15.8083 1.45833 16 1.93333 16 2.5V16.5H18V18.5H0ZM4 16.5H14V2.5H4V16.5Z" fill="#FF6B6B"/>
+                            </svg>
+                            Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Попап с фильтрами -->
+    <div class="popup-overlay" id="filters-popup">
+        <div class="popup-container">
+            <div class="popup-header">
+                <div class="popup-title"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0085 8.99188C10.0085 7.80788 9.61648 6.76789 8.83248 5.87189C8.04848 4.97588 7.09648 4.41588 5.97648 4.19188V0.0158844H4.00848V4.19188C2.88848 4.41588 1.93648 4.97588 1.15248 5.87189C0.36848 6.76789 -0.01552 7.80788 0.00048 8.99188C0.01648 10.1759 0.40848 11.2239 1.17648 12.1359C1.94448 13.0479 2.88848 13.5999 4.00848 13.7919V31.9839H6.02448V13.7919C7.11248 13.5999 8.04848 13.0479 8.83248 12.1359C9.61648 11.2239 10.0085 10.1759 10.0085 8.99188ZM5.01648 12.0159C4.21648 12.0159 3.51248 11.7119 2.90448 11.1039C2.29648 10.4959 1.99248 9.79189 1.99248 8.99188C1.99248 8.19188 2.29648 7.49588 2.90448 6.90388C3.51248 6.31188 4.21648 6.01588 5.01648 6.01588C5.81648 6.01588 6.51248 6.31188 7.10448 6.90388C7.69648 7.49588 7.99248 8.19188 7.99248 8.99188C7.99248 9.79189 7.69648 10.4959 7.10448 11.1039C6.51248 11.7119 5.81648 12.0159 5.01648 12.0159ZM16.0085 18.2079V0.0158844H13.9925V18.2079C12.8725 18.3999 11.9285 18.9519 11.1605 19.8639C10.3925 20.7759 10.0085 21.8239 10.0085 23.0079C10.0085 24.1919 10.3925 25.2319 11.1605 26.1279C11.9285 27.0239 12.8725 27.5839 13.9925 27.8079V31.9839H16.0085V27.8079C17.1285 27.5839 18.0725 27.0239 18.8405 26.1279C19.6085 25.2319 19.9925 24.1919 19.9925 23.0079C19.9925 21.8239 19.6085 20.7759 18.8405 19.8639C18.0725 18.9519 17.1285 18.3999 16.0085 18.2079ZM15.0005 25.9839C14.2005 25.9839 13.4965 25.6879 12.8885 25.0959C12.2805 24.5039 11.9845 23.8079 12.0005 23.0079C12.0165 22.2079 12.3205 21.5039 12.9125 20.8959C13.5045 20.2879 14.2005 19.9839 15.0005 19.9839C15.8005 19.9839 16.5045 20.2879 17.1125 20.8959C17.7205 21.5039 18.0245 22.2079 18.0245 23.0079C18.0245 23.8079 17.7205 24.5039 17.1125 25.0959C16.5045 25.6879 15.8005 25.9839 15.0005 25.9839ZM30.0245 12.9759C30.0245 11.8239 29.6325 10.7919 28.8485 9.87988C28.0645 8.96788 27.1125 8.41588 25.9925 8.22388V0.0158844H24.0245V8.17588C22.9045 8.39989 21.9525 8.96788 21.1685 9.87988C20.3845 10.7919 19.9925 11.8319 19.9925 12.9999C19.9925 14.1679 20.3845 15.2079 21.1685 16.1199C21.9525 17.0319 22.9045 17.5839 24.0245 17.7759V31.9839H25.9925V17.7759C27.1125 17.5839 28.0645 17.0319 28.8485 16.1199C29.6325 15.2079 30.0245 14.1599 30.0245 12.9759ZM24.9845 15.9999C24.1845 15.9999 23.4885 15.6959 22.8965 15.0879C22.3045 14.4799 22.0085 13.7759 22.0085 12.9759C22.0085 12.1759 22.3045 11.4799 22.8965 10.8879C23.4885 10.2959 24.1845 9.99989 24.9845 9.99989C25.7845 9.99989 26.4885 10.2959 27.0965 10.8879C27.7045 11.4799 28.0085 12.1839 28.0085 12.9999C28.0085 13.8159 27.7045 14.5199 27.0965 15.1119C26.4885 15.7039 25.7845 15.9999 24.9845 15.9999Z" fill="#007CFF"/>
+                    </svg> Все фильтры</div>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-content">
+                <div class="filter-row">
+                    <div class="custom-select" style="width: 120px;">
+                        <div class="select-selected">Квартира</div>
+                        <div class="select-items">
+                            <div>Квартира</div>
+                            <div>Дом</div>
+                            <div>Комната</div>
+                            <div>Участок</div>
+                            <div>Гараж</div>
+                        </div>
+                    </div>
+
+                    <div class="custom-select" style="width: 120px;">
+                        <div class="select-selected">Купить</div>
+                        <div class="select-items">
+                            <div>Купить</div>
+                            <div>Арендовать</div>
+                            <div>Посуточно</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Количество комнат</div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="rooms" value="studio">
+                            Студия
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rooms" value="1">
+                            1 комната
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rooms" value="2">
+                            2 комнаты
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rooms" value="3">
+                            3 комнаты
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rooms" value="4">
+                            4 комнаты
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rooms" value="5+">
+                            5 комнат и больше
+                        </label>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Цена</div>
+                    <div class="filter-inputs">
+                        <input type="text" class="filter-input" placeholder="От">
+                        <input type="text" class="filter-input" placeholder="До">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Цена м²</div>
+                    <div class="filter-inputs">
+                        <input type="text" class="filter-input" placeholder="От">
+                        <input type="text" class="filter-input" placeholder="До">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Площадь</div>
+                    <div class="filter-inputs">
+                        <input type="text" class="filter-input" placeholder="От">
+                        <input type="text" class="filter-input" placeholder="До">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Этаж</div>
+                    <div class="filter-inputs">
+                        <input type="text" class="filter-input" placeholder="От">
+                        <input type="text" class="filter-input" placeholder="До">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Год постройки дома</div>
+                    <div class="filter-inputs">
+                        <input type="text" class="filter-input" placeholder="От">
+                        <input type="text" class="filter-input" placeholder="До">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Этажей в доме</div>
+                    <div class="filter-inputs">
+                        <input type="text" class="filter-input" placeholder="От">
+                        <input type="text" class="filter-input" placeholder="До">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Тип дома</div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="house-type" value="brick">
+                            Кирпичный
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="house-type" value="panel">
+                            Панельный
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="house-type" value="block">
+                            Блочный
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="house-type" value="monolithic">
+                            Монолитный
+                        </label>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Лифт</div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="elevator" value="passenger">
+                            Пассажирский
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="elevator" value="cargo">
+                            Грузовой
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="elevator" value="none">
+                            Нету
+                        </label>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Парковка</div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="parking" value="underground">
+                            Подземная
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="parking" value="open">
+                            Открытая во дворе
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="parking" value="none">
+                            Нету
+                        </label>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">Ремонт</div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="renovation" value="with">
+                            С ремонтом
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="renovation" value="without">
+                            Без ремонта
+                        </label>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="bottom_popap_menu">
+                <button>Показать  более 1 тыс объявлений</button>
+                <button>На карте <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5098 8.71047C11.5098 7.3292 10.3905 6.20996 9.00926 6.20996C7.629 6.20996 6.50977 7.3292 6.50977 8.71047C6.50977 10.0907 7.629 11.21 9.00926 11.21C10.3905 11.21 11.5098 10.0907 11.5098 8.71047Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99951 19C6.10148 19 1.5 13.9587 1.5 8.59864C1.5 4.40246 4.8571 1 8.99951 1C13.1419 1 16.5 4.40246 16.5 8.59864C16.5 13.9587 11.8985 19 8.99951 19Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="wrapper">
+            <div class="main">
+
+
+                <div class="company">
+
+                    <button class="more_btn open-popup-btn" data-popup="filters-popup">Все фильтры</button>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer flex_daj">
+                <div class="footer_left flex_column">
+                    <a href="" class="logo"><img src="./img/logo.svg" alt=""></a>
+                    <p>Все права защищены <br> 2015-<span class="date"></span> г.</p>
+                </div>
+                <div class="footer_center flex">
+                    <nav class="nav_left flex">
+                        <div class="left_nav ">
+                            <ul class=" flex flex_da flex_column">
+                                <li><a href="">Главная</a></li>
+                                <li><a href="">Продажа</a></li>
+                                <li><a href="">Аренда</a></li>
+                            </ul>
+                        </div>
+                        <div class="right_nav">
+                            <ul class="flex flex_da flex_column">
+                                <li><a href="">Новости</a></li>
+                                <li><a href="">Компании</a></li>
+                                <li><a href="">Реклама</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav class="nav_center">
+                        <ul>
+                            <li><a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.038 8.46289V15.6113" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6148 12.0371H8.45898" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.30078 12.0366C2.30078 4.73454 4.73552 2.2998 12.0376 2.2998C19.3397 2.2998 21.7745 4.73454 21.7745 12.0366C21.7745 19.3388 19.3397 21.7735 12.0376 21.7735C4.73552 21.7735 2.30078 19.3388 2.30078 12.0366Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Мои объявления</a></li>
+                            <li><a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_1518_21240" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_1518_21240)">
+                                <path d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V7.5H19V5H5V19H19V16.5H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM13 17C12.45 17 11.9792 16.8042 11.5875 16.4125C11.1958 16.0208 11 15.55 11 15V9C11 8.45 11.1958 7.97917 11.5875 7.5875C11.9792 7.19583 12.45 7 13 7H20C20.55 7 21.0208 7.19583 21.4125 7.5875C21.8042 7.97917 22 8.45 22 9V15C22 15.55 21.8042 16.0208 21.4125 16.4125C21.0208 16.8042 20.55 17 20 17H13ZM20 15V9H13V15H20ZM16 13.5C16.4167 13.5 16.7708 13.3542 17.0625 13.0625C17.3542 12.7708 17.5 12.4167 17.5 12C17.5 11.5833 17.3542 11.2292 17.0625 10.9375C16.7708 10.6458 16.4167 10.5 16 10.5C15.5833 10.5 15.2292 10.6458 14.9375 10.9375C14.6458 11.2292 14.5 11.5833 14.5 12C14.5 12.4167 14.6458 12.7708 14.9375 13.0625C15.2292 13.3542 15.5833 13.5 16 13.5Z" fill="#B4B4B4"/>
+                                </g>
+                                </svg>
+                                История счета</a></li>
+                            <li><a href=""><svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.5957 12.9646H18.6062" stroke="#B4B4B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.9199 12.9646H13.9304" stroke="#B4B4B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.24215 12.9646H9.25265" stroke="#B4B4B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2502 19.9174C18.6859 23.1097 13.4052 23.7994 9.08468 22.0106C8.44686 21.7807 4.31864 22.8042 3.42288 22.0033C2.52713 21.2012 3.67144 17.505 3.41468 16.9339C1.41564 13.0666 2.18711 8.33736 5.75256 5.14606C10.304 1.0698 17.6987 1.0698 22.2502 5.14606C26.8111 9.22861 26.8017 15.8422 22.2502 19.9174Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Чат</a></li>
+                            <li><a href=""><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_1518_21257" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                <rect y="0.0664062" width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_1518_21257)">
+                                <path d="M7 14.0664C6.45 14.0664 5.97917 13.8706 5.5875 13.4789C5.19583 13.0872 5 12.6164 5 12.0664C5 11.5164 5.19583 11.0456 5.5875 10.6539C5.97917 10.2622 6.45 10.0664 7 10.0664C7.55 10.0664 8.02083 10.2622 8.4125 10.6539C8.80417 11.0456 9 11.5164 9 12.0664C9 12.6164 8.80417 13.0872 8.4125 13.4789C8.02083 13.8706 7.55 14.0664 7 14.0664ZM7 18.0664C5.33333 18.0664 3.91667 17.4831 2.75 16.3164C1.58333 15.1497 1 13.7331 1 12.0664C1 10.3997 1.58333 8.98307 2.75 7.81641C3.91667 6.64974 5.33333 6.06641 7 6.06641C8.11667 6.06641 9.12917 6.34141 10.0375 6.89141C10.9458 7.44141 11.6667 8.16641 12.2 9.06641H21L24 12.0664L19.5 16.5664L17.5 15.0664L15.5 16.5664L13.375 15.0664H12.2C11.6667 15.9664 10.9458 16.6914 10.0375 17.2414C9.12917 17.7914 8.11667 18.0664 7 18.0664ZM7 16.0664C7.93333 16.0664 8.75417 15.7831 9.4625 15.2164C10.1708 14.6497 10.6417 13.9331 10.875 13.0664H14L15.45 14.0914L17.5 12.5664L19.275 13.9414L21.15 12.0664L20.15 11.0664H10.875C10.6417 10.1997 10.1708 9.48307 9.4625 8.91641C8.75417 8.34974 7.93333 8.06641 7 8.06641C5.9 8.06641 4.95833 8.45807 4.175 9.24141C3.39167 10.0247 3 10.9664 3 12.0664C3 13.1664 3.39167 14.1081 4.175 14.8914C4.95833 15.6747 5.9 16.0664 7 16.0664Z" fill="#B4B4B4"/>
+                                </g>
+                                </svg>
+                                Смена пороля</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav_rigth">
+                        <ul class="flex flex_da flex_column">
+                            <li><a href=""><svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8445 20.779C8.15273 20.779 5 20.2335 5 18.0489C5 15.8643 8.13273 13.8477 11.8445 13.8477C15.5364 13.8477 18.6891 15.8448 18.6891 18.0294C18.6891 20.2131 15.5564 20.779 11.8445 20.779Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8365 10.8208C14.2592 10.8208 16.2229 8.9563 16.2229 6.65593C16.2229 4.35556 14.2592 2.49023 11.8365 2.49023C9.41379 2.49023 7.44924 4.35556 7.44924 6.65593C7.44106 8.94853 9.39106 10.813 11.8056 10.8208C11.8165 10.8208 11.8265 10.8208 11.8365 10.8208Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Личный кабинет</a></li>
+                            <li><a href=""><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42251 12.4459C2.34951 9.09595 3.60451 4.93095 7.12151 3.79895C8.97151 3.20195 11.2545 3.69995 12.5515 5.48895C13.7745 3.63395 16.1235 3.20595 17.9715 3.79895C21.4875 4.93095 22.7495 9.09595 21.6775 12.4459C20.0075 17.7559 14.1805 20.5219 12.5515 20.5219C10.9235 20.5219 5.14851 17.8179 3.42251 12.4459Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.2891 7.56348C17.4961 7.68748 18.2511 8.64448 18.2061 9.98548" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Избранное</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer_right">
+                    <h6>Соц.Сети</h6>
+                    <div class="flex_da">
+                        <a href=""><img src="./img/icon/Facebook.svg" alt=""></a>
+                        <a href=""><img src="./img/icon/Vkontakte.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/popup.js"></script>
+
+</body>
+
+</html>
