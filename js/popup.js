@@ -100,3 +100,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработчик для радио-кнопок
+    const otherOption = document.querySelector('input[value="other"]');
+    const otherContainer = document.querySelector('.other-complaint-container');
+
+    document.querySelectorAll('input[name="complaint"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'other') {
+                otherContainer.style.display = 'block';
+            } else {
+                otherContainer.style.display = 'none';
+            }
+        });
+    });
+
+    // Обработчик для кнопки отправки жалобы
+    document.querySelector('.submit-complaint-btn').addEventListener('click', function() {
+        const selectedComplaint = document.querySelector('input[name="complaint"]:checked');
+        const otherText = document.querySelector('.other-complaint-input').value;
+
+        if (!selectedComplaint) {
+            alert('Пожалуйста, выберите причину жалобы');
+            return;
+        }
+
+        if (selectedComplaint.value === 'other' && !otherText.trim()) {
+            alert('Пожалуйста, опишите проблему');
+            return;
+        }
+
+        // Здесь можно добавить отправку жалобы на сервер
+        alert('Жалоба отправлена! Спасибо за вашу помощь.');
+        document.getElementById('complaint-popup').style.display = 'none';
+        document.body.classList.remove('popup-open');
+    });
+});

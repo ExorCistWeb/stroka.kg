@@ -359,6 +359,69 @@
             </div>
         </div>
     </div>
+    <!-- Попап для жалобы -->
+    <div class="popup-overlay" id="complaint-popup">
+        <div class="popup-container">
+            <div class="popup-header">
+                <div class="popup-title">Причина жалобы</div>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-content">
+                <div class="complaint-options">
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="price-error">
+                    <span class="radio-custom"></span>
+                    Ошибка в цене
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="sold">
+                    <span class="radio-custom"></span>
+                    Участок продали
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="photos">
+                    <span class="radio-custom"></span>
+                    Фотографии некорректные
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="location">
+                    <span class="radio-custom"></span>
+                    Неправильное расположение
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="realtor">
+                    <span class="radio-custom"></span>
+                    Ответил риелтор
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="phone">
+                    <span class="radio-custom"></span>
+                    Телефон не отвечает
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="fraud">
+                    <span class="radio-custom"></span>
+                    Обман
+                </label>
+                    <label class="complaint-option">
+                    <input type="radio" name="complaint" value="other">
+                    <span class="radio-custom"></span>
+                    Другое
+                </label>
+                </div>
+
+                <div class="other-complaint-container" style="display: none;">
+                    <textarea class="other-complaint-input" placeholder="Опишите проблему"></textarea>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="submit-complaint-btn">Отправить жалобу</button>
+                <div class="complaint-notice">
+                    Все жалобы проходят проверку в службе контроля качества. Спасибо за вашу помощь!
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="wrapper">
             <div class="main">
@@ -367,7 +430,7 @@
                 <div class="company">
 
                     <button class="more_btn open-popup-btn" data-popup="filters-popup">Все фильтры</button>
-
+                    <button class="more_btn open-popup-btn" data-popup="complaint-popup">Пожаловаться</button>
 
                 </div>
             </div>
