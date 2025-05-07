@@ -137,3 +137,55 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('popup-open');
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработчик для попапа заметки - показ/скрытие кнопки Удалить
+    const noteTextarea = document.querySelector('.note-textarea');
+    const deleteBtn = document.querySelector('.delete-btn');
+
+    noteTextarea.addEventListener('input', function() {
+        if (this.value.trim().length > 0) {
+            deleteBtn.style.display = 'block';
+        } else {
+            deleteBtn.style.display = 'none';
+        }
+    });
+
+    // Обработчик для кнопки Удалить
+    deleteBtn.addEventListener('click', function() {
+        noteTextarea.value = '';
+        this.style.display = 'none';
+    });
+
+    // Обработчики для кнопок открытия попапов (пример)
+    document.querySelectorAll('.open-save-search').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.getElementById('save-search-popup').style.display = 'flex';
+        });
+    });
+
+    document.querySelectorAll('.open-confirm-exit').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.getElementById('confirm-exit-popup').style.display = 'flex';
+        });
+    });
+
+    document.querySelectorAll('.open-note').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.getElementById('note-popup').style.display = 'flex';
+        });
+    });
+
+    // Закрытие попапов по клику на крестик или оверлей
+    document.querySelectorAll('.popup-overlay').forEach(popup => {
+        popup.addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('popup-close')) {
+                this.style.display = 'none';
+            }
+        });
+    });
+
+    // Обработчики для кнопок внутри попапов
+    document.querySelector('.popup-btn.secondary').addEventListener('click', function() {
+        this.closest('.popup-overlay').style.display = 'none';
+    });
+});

@@ -23,7 +23,8 @@
 
 .popup-container {
     width: 608px;
-    height: 80vh;
+    max-height: 80vh;
+    height: auto;
     background: #FFFFFF;
     border: 1px solid #B4B4B4;
     border-radius: 60px;
@@ -31,11 +32,6 @@
     flex-direction: column;
     overflow: hidden;
     padding: 45px 0;
-}
-
-#complaint-popup .popup-container {
-    max-height: 80vh;
-    height: auto;
 }
 
 .popup-header {
@@ -312,4 +308,95 @@ body.popup-open {
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
+}
+
+.popup-btn.primary {
+    background-color: #007CFF;
+    color: white;
+    border: none;
+}
+
+.popup-btn.secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.popup-btn.delete-btn {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    margin-right: auto;
+}
+
+
+/* Стили для конкретных попапов */
+
+.search-name-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.notification-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0 5px;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007CFF;
+    border-radius: 4px;
+    position: relative;
+}
+
+.notification-checkbox input {
+    display: none;
+}
+
+.notification-checkbox input:checked+.checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    color: #007CFF;
+}
+
+.notification-info {
+    font-size: 13px;
+    color: #666;
+    margin-left: 26px;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.note-textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.popup-content.center {
+    text-align: center;
+}
+
+.popup-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
 }

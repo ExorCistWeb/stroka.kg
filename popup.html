@@ -422,6 +422,63 @@
             </div>
         </div>
     </div>
+    <!-- 1. Попап сохранения поиска -->
+    <div class="popup-overlay" id="save-search-popup">
+        <div class="popup-container">
+            <div class="popup-header">
+                <div class="popup-title">Сохранить поиск</div>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-content">
+                <p>Придумайте название поиска. Например, "Однокомнатная до $40 тыс., с ремонтом"</p>
+                <input type="text" class="search-name-input" placeholder="Название поиска">
+
+                <label class="notification-checkbox">
+                <input type="checkbox" checked>
+                <span class="checkbox-custom"></span>
+                Получать уведомления
+            </label>
+                <p class="notification-info">Уведомления о новых объявлениях будут приходить каждый час с 9:00 до 23:00</p>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn secondary">Закрыть</button>
+                <button class="popup-btn primary">Сохранить поиск</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Попап подтверждения выхода -->
+    <div class="popup-overlay" id="confirm-exit-popup">
+        <div class="popup-container small">
+            <div class="popup-header">
+                <div class="popup-title">Вы уверены?</div>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-content center">
+                <div class="confirm-buttons">
+                    <button class="popup-btn primary">Остаться</button>
+                    <button class="popup-btn secondary">Выйти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Попап заметки с функцией удаления -->
+    <div class="popup-overlay" id="note-popup">
+        <div class="popup-container">
+            <div class="popup-header">
+                <div class="popup-title">Оставить заметку</div>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-content">
+                <textarea class="note-textarea" placeholder="Текст заметки"></textarea>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn delete-btn" style="display: none;">Удалить</button>
+                <button class="popup-btn primary">Сохранить</button>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="wrapper">
             <div class="main">
@@ -431,7 +488,9 @@
 
                     <button class="more_btn open-popup-btn" data-popup="filters-popup">Все фильтры</button>
                     <button class="more_btn open-popup-btn" data-popup="complaint-popup">Пожаловаться</button>
-
+                    <button class="more_btn open-save-search">Сохранить поиск</button>
+                    <button class="more_btn open-confirm-exit">Подтвердить выход</button>
+                    <button class="more_btn open-note">Добавить заметку</button>
                 </div>
             </div>
         </div>
