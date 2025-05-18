@@ -2852,7 +2852,7 @@ input[type="radio"]:checked+.category-btn {
 }
 
 .company_info {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .detail_section_c {
@@ -2881,7 +2881,13 @@ input[type="radio"]:checked+.category-btn {
 }
 
 .wa_link {
+    align-items: center;
     color: #00D95F !important;
+}
+
+.wa_link_info_item_c {
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #ccc;
 }
 
 .icon_c {
@@ -3071,4 +3077,21 @@ input[type="radio"]:checked+.category-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.search_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 69px !important;
+    gap: 10px;
+    background: #007CFF !important;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    /* identical to box height, or 150% */
+    color: #FFFFFF !important;
 }
