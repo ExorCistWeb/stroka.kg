@@ -48,14 +48,15 @@
                 <div class="header_bottom_content flex_daj">
                     <div class="header_mobile flex_daj">
                         <a class="logo" href="/"><img src="./img/logo.svg" alt=""></a>
-                        <!-- Бургер-кнопка для мобильных -->
-                        <button class="burger-menu" id="burger-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    </div>
 
+                        <div class="language-switcher">
+                            <select id="language-select">
+                                <option value="ru" selected>RU</option>
+                                <option value="en">EN</option>
+                                <option value="de">KG</option>
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="header_bottom_settings flex_daj" id="mobile-menu">
                         <div class="filter_parameters flex_da">
@@ -89,35 +90,7 @@
                 </div>
             </div>
         </div>
-        <!-- Мобильное меню -->
-        <div class="mobile-menu-wrapper" id="mobile-nav">
-            <div class="mobile-menu">
-                <ul>
-                    <li><a href="">Главная</a></li>
-                    <li><a href="">Продажа</a></li>
-                    <li><a href="">Аренда</a></li>
-                    <li><a href="">Новости</a></li>
-                    <li><a href="">Компании</a></li>
-                    <li><a href="">Реклама</a></li>
-                </ul>
 
-                <div class="mobile-menu-footer">
-                    <div class="language-switcher">
-                        <select id="mobile-language-select">
-                        <option value="ru" selected>RU</option>
-                        <option value="en">EN</option>
-                        <option value="de">KG</option>
-                    </select>
-                    </div>
-                    <a href="#" class="favorites flex_da">
-                        <img src="./img/icon/Heart.svg" alt=""> Избранное
-                    </a>
-                    <button class="profile flex_da profile-btn">
-                    <img src="./img/icon/Profile.svg" alt=""> Личный кабинет
-                </button>
-                </div>
-            </div>
-        </div>
         <div class="lk_modal">
 
             <div class="lk_head">
@@ -234,6 +207,68 @@
                             </svg>
                             </button>
                     </div>
+                </div>
+                <div class="mobile_filters">
+                    <button>
+                        <span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.80908 12.1015H11.1703" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.80005 10.2848C1.80005 6.0615 2.26055 6.35625 4.7393 4.0575C5.8238 3.1845 7.5113 1.5 8.96855 1.5C10.425 1.5 12.1463 3.17625 13.2405 4.0575C15.7193 6.35625 16.179 6.0615 16.179 10.2848C16.179 16.5 14.7098 16.5 8.98955 16.5C3.2693 16.5 1.80005 16.5 1.80005 10.2848Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Купить</span>
+                        <span class="arrow">200 000 <img src="./img/icon/arrow_forward_ios (1).svg" alt=""></span>
+                    </button>
+                    <button>
+                        <span>
+                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.06238 9.58171C2.06238 4.36471 3.80163 2.62621 9.01788 2.62621C14.2349 2.62621 15.9741 4.36471 15.9741 9.58171C15.9741 14.7987 14.2349 16.5372 9.01788 16.5372C3.80163 16.5372 2.06238 14.7987 2.06238 9.58171Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.26892 6.99301H15.7749" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.3215 9.94576H12.3282" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.02189 9.94576H9.02864" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.71611 9.94576H5.72286" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.3215 12.8348H12.3282" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.02189 12.8348H9.02864" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.71611 12.8348H5.72286" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.0248 1.53758V3.98408" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.01855 1.53758V3.98408" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+ Аренда</span>
+                        <span class="arrow">200 000 <img src="./img/icon/arrow_forward_ios (1).svg" alt=""></span>
+                    </button>
+                    <button>
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1035_32805" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<rect width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1035_32805)">
+<path d="M3 21V7H7V3H17V11H21V21H13V17H11V21H3ZM5 19H7V17H5V19ZM5 15H7V13H5V15ZM5 11H7V9H5V11ZM9 15H11V13H9V15ZM9 11H11V9H9V11ZM9 7H11V5H9V7ZM13 15H15V13H13V15ZM13 11H15V9H13V11ZM13 7H15V5H13V7ZM17 19H19V17H17V19ZM17 15H19V13H17V15Z" fill="#333333"/>
+</g>
+</svg>
+
+ Компании</span>
+                        <span class="arrow"> <img src="./img/icon/arrow_forward_ios (1).svg" alt=""></span>
+                    </button>
+                    <button>
+                        <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.9965 13.0803H6.97986" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.9965 9.94715H6.97986" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.27581 6.8144H6.97998" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.0083 10.0001C3.0083 15.7809 4.75663 17.7084 10.0008 17.7084C15.2458 17.7084 16.9933 15.7809 16.9933 10.0001C16.9933 4.21925 15.2458 2.29175 10.0008 2.29175C4.75663 2.29175 3.0083 4.21925 3.0083 10.0001Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+ Новости</span>
+                        <span class="arrow">  <img src="./img/icon/arrow_forward_ios (1).svg" alt=""></span>
+                    </button>
+                    <button>
+                        <span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.03064 6.05219V12.0092" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.0121 9.0307H6.04895" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.916626 9.03069C0.916626 2.9456 2.94557 0.916656 9.03066 0.916656C15.1157 0.916656 17.1447 2.9456 17.1447 9.03069C17.1447 15.1158 15.1157 17.1447 9.03066 17.1447C2.94557 17.1447 0.916626 15.1158 0.916626 9.03069Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+ Мои объявления</span>
+                        <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt=""></span>
+                    </button>
                 </div>
                 <div class="action_box flex_daj">
                     <div class="action_info">
@@ -727,7 +762,50 @@
             </div>
         </div>
     </footer>
+    <div class="footer_mobile">
+        <a href="">
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5918 17.7738H15.376" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.799988 14.9774C0.799988 8.47709 1.51632 8.93077 5.37215 5.39257C7.05915 4.04887 9.68415 1.45612 11.951 1.45612C14.2167 1.45612 16.8942 4.03617 18.5963 5.39257C22.4522 8.93077 23.1673 8.47709 23.1673 14.9774C23.1673 24.5438 20.8818 24.5438 11.9837 24.5438C3.08549 24.5438 0.799988 24.5438 0.799988 14.9774Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
+        </a>
+        <a href="">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.40887 14.5207C2.15704 10.6123 3.62121 5.75318 7.72437 4.43251C9.88271 3.73601 12.5462 4.31701 14.0594 6.40418C15.4862 4.24001 18.2267 3.74068 20.3827 4.43251C24.4847 5.75318 25.957 10.6123 24.7064 14.5207C22.758 20.7157 15.9599 23.9427 14.0594 23.9427C12.16 23.9427 5.42254 20.788 3.40887 14.5207Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.42 8.82465C19.8282 8.96931 20.709 10.0858 20.6565 11.6503" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </a>
+        <a href="">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="42" height="42" rx="21" fill="#4292ED"/>
+<mask id="mask0_3012_1741" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="22" height="22">
+<rect x="10" y="10" width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_3012_1741)">
+<path d="M20.0833 21.9166H14.5833V20.0833H20.0833V14.5833H21.9166V20.0833H27.4166V21.9166H21.9166V27.4166H20.0833V21.9166Z" fill="white"/>
+</g>
+</svg>
+
+        </a>
+        <a href="">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.596 13.4313H18.6065" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.9188 13.4313H13.9293" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.2416 13.4313H9.2521" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.2495 20.384C18.6853 23.5764 13.4045 24.2661 9.08401 22.4773C8.44619 22.2474 4.31797 23.2709 3.42221 22.4699C2.52646 21.6679 3.67077 17.9717 3.414 17.4006C1.41497 13.5332 2.18644 8.80403 5.75188 5.61273C10.3034 1.53648 17.698 1.53648 22.2495 5.61273C26.8104 9.69529 26.801 16.3088 22.2495 20.384Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </a>
+        <a href="">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8186 24.7029C9.51149 24.7029 5.83331 24.0665 5.83331 21.5179C5.83331 18.9692 9.48816 16.6164 13.8186 16.6164C18.1257 16.6164 21.8039 18.9464 21.8039 21.4951C21.8039 24.0427 18.1491 24.7029 13.8186 24.7029Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8102 13.0846C16.6367 13.0846 18.9276 10.9094 18.9276 8.22564C18.9276 5.54188 16.6367 3.36566 13.8102 3.36566C10.9837 3.36566 8.69168 5.54188 8.69168 8.22564C8.68213 10.9003 10.9571 13.0755 13.7741 13.0846C13.7868 13.0846 13.7985 13.0846 13.8102 13.0846Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </a>
+    </div>
     <script src="./js/main.js"></script>
     <script>
         function toggleAdDetails(element) {
