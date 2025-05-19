@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -45,10 +46,18 @@
         <div class="header_bottom ">
             <div class="wrapper">
                 <div class="header_bottom_content flex_daj">
+                    <div class="header_mobile flex_daj">
+                        <a class="logo" href="/"><img src="./img/logo.svg" alt=""></a>
+                        <!-- Бургер-кнопка для мобильных -->
+                        <button class="burger-menu" id="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    </div>
 
-                    <a class="logo" href="/"><img src="./img/logo.svg" alt=""></a>
 
-                    <div class="header_bottom_settings flex_daj">
+                    <div class="header_bottom_settings flex_daj" id="mobile-menu">
                         <div class="filter_parameters flex_da">
                             <select id="">
                                 <option value="Квартира" selected>Квартира</option>
@@ -77,6 +86,35 @@
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div class="mobile-menu-wrapper" id="mobile-nav">
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Продажа</a></li>
+                    <li><a href="">Аренда</a></li>
+                    <li><a href="">Новости</a></li>
+                    <li><a href="">Компании</a></li>
+                    <li><a href="">Реклама</a></li>
+                </ul>
+
+                <div class="mobile-menu-footer">
+                    <div class="language-switcher">
+                        <select id="mobile-language-select">
+                        <option value="ru" selected>RU</option>
+                        <option value="en">EN</option>
+                        <option value="de">KG</option>
+                    </select>
+                    </div>
+                    <a href="#" class="favorites flex_da">
+                        <img src="./img/icon/Heart.svg" alt=""> Избранное
+                    </a>
+                    <button class="profile flex_da profile-btn">
+                    <img src="./img/icon/Profile.svg" alt=""> Личный кабинет
+                </button>
                 </div>
             </div>
         </div>
