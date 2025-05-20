@@ -40,3 +40,110 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Контент для каждого попапа
+const popupContents = {
+    'Купить': `
+        <div class="popup-buttons">
+            <button class="popup-button">
+                <span>Квартира</span>
+                <span class="arrow">200 000 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Участок</span>
+                <span class="arrow">60 080 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Дом или дача</span>
+                <span class="arrow">60 080 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Гараж или паркинг</span>
+                <span class="arrow">60 080 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Коммерческая недвижимость</span>
+                <span class="arrow">60 080 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Бизнес</span>
+                <span class="arrow">60 080 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Промбазы и заводы</span>
+                <span class="arrow">60 080 <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+        </div>
+    `,
+    'Аренда': `
+        <div class="popup-buttons">
+            <button class="popup-button">
+                <span>Квартира</span>
+                <span class="arrow">Аренда <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Коммерческая недвижимость</span>
+                <span class="arrow">Аренда <img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+        </div>
+    `,
+    'Компании': `
+        <div class="popup-buttons">
+            <button class="popup-button">
+                <span>Риэлторские компании</span>
+                <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Застройщики</span>
+                <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+        </div>
+    `,
+    'Новости': `
+        <div class="popup-buttons">
+            <button class="popup-button">
+                <span>Новости недвижимости</span>
+                <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Аналитика</span>
+                <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+        </div>
+    `,
+    'Мои объявления': `
+        <div class="popup-buttons">
+            <button class="popup-button">
+                <span>Активные объявления</span>
+                <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+            <button class="popup-button">
+                <span>Архивные объявления</span>
+                <span class="arrow"><img src="./img/icon/arrow_forward_ios (1).svg" alt></span>
+            </button>
+        </div>
+    `
+};
+
+document.querySelectorAll('.mobile_filters button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const popup = document.querySelector('.fullscreen-popup');
+        const title = popup.querySelector('.popup-title');
+        const content = popup.querySelector('.popup-content');
+
+        // Получаем текст кнопки (удаляем иконку и числа)
+        const buttonText = button.querySelector('span:first-child').textContent.trim();
+
+        // Устанавливаем заголовок
+        title.textContent = buttonText;
+
+        // Устанавливаем контент
+        content.innerHTML = popupContents[buttonText] || '<p>Контент не найден</p>';
+
+        popup.style.display = 'flex';
+    });
+});
+
+document.querySelector('.close-popup').addEventListener('click', () => {
+    document.querySelector('.fullscreen-popup').style.display = 'none';
+});

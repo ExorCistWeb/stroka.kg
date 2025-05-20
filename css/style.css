@@ -3097,6 +3097,7 @@ input[type="radio"]:checked+.category-btn {
 }
 
 .mobile_filters,
-.footer_mobile {
+.footer_mobile,
+.fullscreen-popup {
     display: none;
 }

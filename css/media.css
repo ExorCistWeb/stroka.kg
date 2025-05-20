@@ -1,250 +1,307 @@
-/* Стили для мобильного меню */
-
-.burger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 24px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1001;
-}
-
-.burger-menu span {
-    width: 100%;
-    height: 2px;
-    background: #000;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu-wrapper {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    height: 100%;
-    background: #fff;
-    z-index: 1000;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-menu-wrapper.active {
-    left: 0;
-}
-
-.mobile-menu {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mobile-menu ul li {
-    margin-bottom: 15px;
-}
-
-.mobile-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-.mobile-menu-footer {
-    margin-top: 20px;
-}
-
-
-/* Адаптивные стили */
-
-@media (max-width: 1024px) {
-    /* Стили для планшета */
-    .header_top {
-        display: none;
-    }
-    .filter_parameters {
-        flex-wrap: wrap;
-    }
-    .filter_parameters select {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Стили для телефона */
-    .header_top {
-        display: none;
-    }
-    .header_bottom_settings {
-        display: none;
-    }
-    #mobile-menu.active {
-        display: flex;
-    }
+    /* Стили для мобильного меню */
+    
     .burger-menu {
-        display: flex;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
     }
-    .header_mobile {
+    
+    .burger-menu span {
         width: 100%;
+        height: 2px;
+        background: #000;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-wrapper {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        background: #fff;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-menu-wrapper.active {
+        left: 0;
+    }
+    
+    .mobile-menu {
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
-    .header_bottom_content {
-        flex-direction: column;
-        gap: 20px !important;
-    }
-    .header_bottom_settings {
-        flex-direction: column;
-    }
-    .wrapper {
-        padding: 0 20px;
-    }
-    header {
-        padding: 20px 0 7px;
-    }
-}
-
-@media (max-width: 480px) {
-    .wrapper {
+    
+    .mobile-menu ul {
+        list-style: none;
         padding: 0;
-    }
-    .lk_modal {
-        display: none;
-    }
-    header {
-        padding: 0 10px;
-    }
-    .filter_option {
-        display: none;
-    }
-    .action_box {
-        border-radius: 0;
-        border: none;
-    }
-    .action_btn {
-        display: none;
-    }
-    .ad_widget {
-        width: 80px;
-        height: 34px;
-        right: 6px;
-        top: -13px;
-    }
-    .ad_widget img {
-        width: 100%;
-        height: 100%;
-    }
-    .ad_fon {
-        display: none;
-    }
-    .ad_details_flex {
-        flex-direction: column-reverse;
-    }
-    .ad_details {
-        padding: 10px 15px;
-    }
-    .detail_section {
-        max-width: unset;
-        width: 100%;
-    }
-    .ad_link {
-        flex-wrap: wrap;
-        gap: 15px 10px;
-    }
-    .ad_link span,
-    .ad_link a {
         margin: 0;
     }
-    .dates_info {
-        gap: 10px;
+    
+    .mobile-menu ul li {
+        margin-bottom: 15px;
     }
-    .dates_info svg {
-        display: none;
+    
+    .mobile-menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
     }
-    .action_buttons {
-        flex-direction: column;
-        border: none;
+    
+    .mobile-menu-footer {
+        margin-top: 20px;
     }
-    .action_buttons button {
-        border: none;
-        border-bottom: 1px solid #ccc;
+    /* Адаптивные стили */
+    
+    @media (max-width: 1024px) {
+        /* Стили для планшета */
+        .header_top {
+            display: none;
+        }
+        .filter_parameters {
+            flex-wrap: wrap;
+        }
+        .filter_parameters select {
+            margin-bottom: 10px;
+        }
     }
-    .action_button:nth-child(3) {
-        border-bottom: 1px solid #ccc;
+    
+    @media (max-width: 768px) {
+        /* Стили для телефона */
+        .header_top {
+            display: none;
+        }
+        .header_bottom_settings {
+            display: none;
+        }
+        #mobile-menu.active {
+            display: flex;
+        }
+        .burger-menu {
+            display: flex;
+        }
+        .header_mobile {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .header_bottom_content {
+            flex-direction: column;
+            gap: 20px !important;
+        }
+        .header_bottom_settings {
+            flex-direction: column;
+        }
+        .wrapper {
+            padding: 0 20px;
+        }
+        header {
+            padding: 20px 0 7px;
+        }
     }
-    .detail_item {
-        font-size: 16px;
-        padding: 9px 24px
+    
+    @media (max-width: 480px) {
+        .wrapper {
+            padding: 0;
+        }
+        .lk_modal {
+            display: none;
+        }
+        header {
+            padding: 0 10px;
+        }
+        .filter_option {
+            display: none;
+        }
+        .action_box {
+            border-radius: 0;
+            border: none;
+        }
+        .action_btn {
+            display: none;
+        }
+        .ad_widget {
+            width: 80px;
+            height: 34px;
+            right: 6px;
+            top: -13px;
+        }
+        .ad_widget img {
+            width: 100%;
+            height: 100%;
+        }
+        .ad_fon {
+            display: none;
+        }
+        .ad_details_flex {
+            flex-direction: column-reverse;
+        }
+        .ad_details {
+            padding: 10px 15px;
+        }
+        .detail_section {
+            max-width: unset;
+            width: 100%;
+        }
+        .ad_link {
+            flex-wrap: wrap;
+            gap: 15px 10px;
+        }
+        .ad_link span,
+        .ad_link a {
+            margin: 0;
+        }
+        .dates_info {
+            gap: 10px;
+        }
+        .dates_info svg {
+            display: none;
+        }
+        .action_buttons {
+            flex-direction: column;
+            border: none;
+        }
+        .action_buttons button {
+            border: none;
+            border-bottom: 1px solid #ccc;
+        }
+        .action_button:nth-child(3) {
+            border-bottom: 1px solid #ccc;
+        }
+        .detail_item {
+            font-size: 16px;
+            padding: 9px 24px
+        }
+        .price_item strong,
+        .contact_item strong {
+            font-size: 16px;
+        }
+        .price_item,
+        .contact_item a {
+            font-size: 16px;
+        }
+        footer {
+            display: none;
+        }
+        .mobile_filters {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .mobile_filters button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            gap: 20px;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E1E1E1;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #333333;
+        }
+        .mobile_filters button span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .mobile_filters button span.arrow {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            /* identical to box height */
+            color: #D9D9D9;
+        }
+        .footer_mobile {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 27px 25px;
+            background: #FFFFFF;
+            border-top: 1px solid #D9D9D9;
+        }
+        .fullscreen-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .popup-header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .close-popup {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+        }
+        .popup-title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .popup-content {
+            padding: 20px;
+        }
+        /* Стили для кнопок внутри попапа */
+        .popup-content .popup-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .popup-content .popup-button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            text-align: left;
+        }
+        .popup-content .popup-button span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .popup-content .arrow img {
+            width: 16px;
+        }
     }
-    .price_item strong,
-    .contact_item strong {
-        font-size: 16px;
-    }
-    .price_item,
-    .contact_item a {
-        font-size: 16px;
-    }
-    footer {
-        display: none;
-    }
-    .mobile_filters {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .mobile_filters button {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 10px;
-        gap: 20px;
-        background: #FFFFFF;
-        border-bottom: 1px solid #E1E1E1;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        color: #333333;
-    }
-    .mobile_filters button span {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .mobile_filters button span.arrow {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        /* identical to box height */
-        color: #D9D9D9;
-    }
-    .footer_mobile {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 99999;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 15px 27px 25px;
-        background: #FFFFFF;
-        border-top: 1px solid #D9D9D9;
-    }
-}
