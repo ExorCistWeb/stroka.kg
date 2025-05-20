@@ -252,7 +252,7 @@
             width: 100%;
             height: 100%;
             background: white;
-            z-index: 1000;
+            z-index: 99999;
             display: none;
             flex-direction: column;
             overflow-y: auto;
@@ -303,5 +303,19 @@
         }
         .popup-content .arrow img {
             width: 16px;
+        }
+        .header_bottom .language-switcher {
+            display: flex;
+        }
+        .tabs_mobile {
+            display: flex;
+            margin-top: 20px;
+        }
+        .tabs_mobile button {
+            width: 100%;
+            padding: 14px 32px;
+        }
+        .tabs_mobile_modal {
+            margin-bottom: 10px;
         }
     }
